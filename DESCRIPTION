@@ -1,0 +1,33 @@
+Package: pluripotent
+Title: Generate an embryonic repository
+Description: Repeatedly generate an embryonic repository with one command.
+Version: 0.1.1.9001
+Date: 2019-03-22
+Authors@R: c(person("Will", "Beasley", role = c("aut", "cre"), email =
+    "wibeasley@hotmail.com", comment = c(ORCID = "0000-0002-5613-5006")),
+    person("Andriy", "Koval",
+    role = "ctb"))
+Author: Will Beasley [aut, cre],
+    Andriy Koval [ctb]
+Maintainer: Will Beasley <wibeasley@hotmail.com>
+URL: https://github.com/OuhscBbmc/pluripotent, http://ouhsc.edu/bbmc/
+BugReports: https://github.com/OuhscBbmc/pluripotent/issues
+Depends:
+    R(>= 3.0.0),
+    stats
+Imports:
+    httr (>= 1.3.0),
+    magrittr,
+    readr (>= 1.3.1),
+    rlang,
+    tibble (>= 1.4.0)
+Suggests:
+    checkmate  (>= 1.8.4),
+    knitr (>= 1.18.0),
+    testthat (>= 2.0)
+License: MIT + file LICENSE
+LazyData: TRUE
+VignetteBuilder: knitr
+Encoding: UTF-8
+RoxygenNote: 6.1.1
+Roxygen: list(markdown = TRUE)
