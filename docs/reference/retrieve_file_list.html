@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • pluripotent</title>
+<title>Retrieve files for a project — retrieve_file_list • pluripotent</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,7 +30,10 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Retrieve files for a project — retrieve_file_list" />
+
+<meta property="og:description" content="Retrieve the complete list of files to be copied into a new project." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -47,7 +50,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -94,42 +97,80 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Retrieve files for a project</h1>
+    <small class="dont-index">Source: <a href='https://github.com/OuhscBbmc/pluripotent/blob/master/R/retrieve-file-list.R'><code>R/retrieve-file-list.R</code></a></small>
+    <div class="hidden name"><code>retrieve_file_list.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Retrieve the complete list of files to be copied into a new project.</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="retrieve_file_list.html">retrieve_file_list()</a></code> </p>
-        </td>
-        <td><p>Retrieve files for a project</p></td>
-      </tr>
-    </tbody>
+    <pre class="usage"><span class='fu'>retrieve_file_list</span>(<span class='no'>offspring</span>, <span class='kw'>project_name</span> <span class='kw'>=</span> <span class='st'>"new-project"</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>offspring</th>
+      <td><p><a href='https://www.rdocumentation.org/packages/base/topics/character'>character</a> of observed values in the investigation. Required.</p></td>
+    </tr>
+    <tr>
+      <th>project_name</th>
+      <td><p><a href='https://www.rdocumentation.org/packages/base/topics/character'>character</a> of the new project.  Defaults to <code>new-project</code>.</p></td>
+    </tr>
     </table>
-  </div>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
+    <p>Table of files to copy</p>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>Currently, only one type of project is supported:</p><ol>
+<li><p>r-analysis-skeleton</p></li>
+</ol>
+    
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>To view the files involved in each project type,
+refer to https://github.com/OuhscBbmc/pluripotent/inst/data/file-to-copy.csv.
+Each line represents one file that will be placed in the new project.  The columns are</p><ol>
+<li><p><code>offspring</code>: the project type to be created.</p></li>
+<li><p><code>destination</code>: the file's location in the new project.</p></li>
+<li><p><code>source</code>: the location where the file is copied from.</p></li>
+</ol>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>magrittr</span>)</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: ‘magrittr’</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:testthat’:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    equals, is_less_than, not</span></div><div class='input'><span class='no'>d1</span> <span class='kw'>&lt;-</span> <span class='fu'>retrieve_file_list</span>(<span class='st'>"r-analysis-skeleton"</span>)
+<span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'>retrieve_file_list</span>(<span class='st'>"r-analysis-skeleton"</span>)
+
+<span class='co'># download.file(d1$source, d1$destination)</span></div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+
+      <li><a href="#details">Details</a></li>
+
+      <li><a href="#note">Note</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
+    <h2>Author</h2>
+    <p>Will Beasley</p>
   </div>
 </div>
 
