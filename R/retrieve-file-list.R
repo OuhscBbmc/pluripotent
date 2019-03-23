@@ -27,7 +27,9 @@
 #' @examples
 #' library(magrittr)
 
-#' retrieve_file_list("r-analysis-skeleton")
+#' d <- retrieve_file_list("r-analysis-skeleton")
+#'
+#' # download.file(d$source, d$destination)
 
 #' @export
 retrieve_file_list <- function(
@@ -40,9 +42,9 @@ retrieve_file_list <- function(
   checkmate::assert_subset(    offspring          , levels_offspring, empty.ok = F)
 
   col_types <- readr::cols_only(
-    offspring     = readr::col_character(),
-    destination   = readr::col_character(),
-    source        = readr::col_character()
+    offspring               = readr::col_character(),
+    destination_template    = readr::col_character(),
+    source                  = readr::col_character()
   )
   d <- system.file("metadata", "file-to-copy.csv", package = "pluripotent", mustWork = TRUE) %>%
     # "metadata/file-to-copy.csv" %>%

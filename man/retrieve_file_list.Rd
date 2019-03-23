@@ -33,7 +33,9 @@ Each line represents one file that will be placed in the new project.  The colum
 }
 \examples{
 library(magrittr)
-retrieve_file_list("r-analysis-skeleton")
+d <- retrieve_file_list("r-analysis-skeleton")
+
+# download.file(d$source, d$destination)
 }
 \author{
 Will Beasley
