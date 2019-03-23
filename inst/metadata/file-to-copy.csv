@@ -1,3 +1,4 @@
 offspring,destination_template,source
 r-analysis-skeleton,.gitignore,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.gitignore
+r-analysis-skeleton,{project-name}.Rproj,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/RAnalysisSkeleton.Rproj
 

@@ -4,10 +4,12 @@
 \alias{retrieve_file_list}
 \title{Retrieve files for a project}
 \usage{
-retrieve_file_list(offspring)
+retrieve_file_list(offspring, project_name = "new-project")
 }
 \arguments{
 \item{offspring}{\link{character} of observed values in the investigation. Required.}
+
+\item{project_name}{\link{character} of the new project.  Defaults to \code{new-project}.}
 }
 \value{
 Table of files to copy
@@ -33,9 +35,10 @@ Each line represents one file that will be placed in the new project.  The colum
 }
 \examples{
 library(magrittr)
-d <- retrieve_file_list("r-analysis-skeleton")
+d1 <- retrieve_file_list("r-analysis-skeleton")
+d2 <- retrieve_file_list("r-analysis-skeleton")
 
-# download.file(d$source, d$destination)
+# download.file(d1$source, d1$destination)
 }
 \author{
 Will Beasley

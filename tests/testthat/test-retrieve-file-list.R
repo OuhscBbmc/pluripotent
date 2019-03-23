@@ -9,5 +9,5 @@ test_that("Smoke Test", {
 
 test_that("Smoke Test", {
   d <- retrieve_file_list("r-analysis-skeleton")
-  expect_equal(nrow(d), 1L)
+  expect_equal(nrow(d), 2L)
 })

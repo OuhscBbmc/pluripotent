@@ -5,6 +5,7 @@
 #' @description Retrieve the complete list of files to be copied into a new project.
 #'
 #' @param offspring [character] of observed values in the investigation. Required.
+#' @param project_name [character] of the new project.  Defaults to `new-project`.
 #' @return Table of files to copy
 #'
 #' @details
@@ -27,13 +28,15 @@
 #' @examples
 #' library(magrittr)
 
-#' d <- retrieve_file_list("r-analysis-skeleton")
+#' d1 <- retrieve_file_list("r-analysis-skeleton")
+#' d2 <- retrieve_file_list("r-analysis-skeleton")
 #'
-#' # download.file(d$source, d$destination)
+#' # download.file(d1$source, d1$destination)
 
 #' @export
 retrieve_file_list <- function(
-  offspring
+  offspring,
+  project_name = "new-project"
 ) {
   levels_offspring <- c(
     "r-analysis-skeleton"
@@ -53,5 +56,9 @@ retrieve_file_list <- function(
   checkmate::assert_tibble(d, min.rows = 1)
 
   d %>%
-    dplyr::filter(.data$offspring == offspring)
+    dplyr::filter(.data$offspring == offspring) %>%
+    dplyr::mutate(
+      destination   = gsub("\\{project-name\\}", project_name, .data$destination_template)
+    ) %>%
+    dplyr::select(.data$destination, .data$destination_template, .data$source)
 }
