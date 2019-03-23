@@ -43,16 +43,16 @@ The package can be uninstalled from your local machine with `remove.packages("pl
 
 | [GitHub](https://github.com/OuhscBbmc/pluripotent) | [Travis-CI](https://travis-ci.org/OuhscBbmc/pluripotent/builds) | [AppVeyor](https://ci.appveyor.com/project/wibeasley/pluripotent/history) | [Coveralls](https://coveralls.io/r/OuhscBbmc/pluripotent) |
 | :----- | :---------------------------: | :-----------------------------: | :-------: |
-| [Master](https://github.com/OuhscBbmc/codified/tree/master) | [![Build Status](https://travis-ci.org/OuhscBbmc/pluripotent.svg?branch=master)](https://travis-ci.org/OuhscBbmc/pluripotent) | [![Build status](https://ci.appveyor.com/api/projects/status/geka1g6d7ms45fh8/branch/master?svg=true)](https://ci.appveyor.com/project/wibeasley/codified/branch/master) | [![Coverage Status](https://coveralls.io/repos/github/OuhscBbmc/codified/badge.svg?branch=master)](https://coveralls.io/github/OuhscBbmc/pluripotent?branch=master) |
-| [Dev](https://github.com/OuhscBbmc/pluripotent/tree/dev) | [![Build Status](https://travis-ci.org/OuhscBbmc/pluripotent.svg?branch=dev)](https://travis-ci.org/OuhscBbmc/pluripotent) | [![Build status](https://ci.appveyor.com/api/projects/status/geka1g6d7ms45fh8/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/codified/branch/dev) | [![Coverage Status](https://coveralls.io/repos/github/OuhscBbmc/codified/badge.svg?branch=dev)](https://coveralls.io/github/OuhscBbmc/pluripotent?branch=dev) |
+| [Master](https://github.com/OuhscBbmc/pluripotent/tree/master) | [![Build Status](https://travis-ci.org/OuhscBbmc/pluripotent.svg?branch=master)](https://travis-ci.org/OuhscBbmc/pluripotent) | [![Build status](https://ci.appveyor.com/api/projects/status/ie2hgogtuqom092k/branch/master?svg=true)](https://ci.appveyor.com/project/wibeasley/pluripotent/branch/master) | [![Coverage Status](https://coveralls.io/repos/github/OuhscBbmc/pluripotent/badge.svg?branch=master)](https://coveralls.io/github/OuhscBbmc/pluripotent?branch=master) |
+| [Dev](https://github.com/OuhscBbmc/pluripotent/tree/dev) | [![Build Status](https://travis-ci.org/OuhscBbmc/pluripotent.svg?branch=dev)](https://travis-ci.org/OuhscBbmc/pluripotent) | [![Build status](https://ci.appveyor.com/api/projects/status/ie2hgogtuqom092k/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/pluripotent/branch/dev) | [![Coverage Status](https://coveralls.io/repos/github/OuhscBbmc/pluripotent/badge.svg?branch=dev)](https://coveralls.io/github/OuhscBbmc/pluripotent?branch=dev) |
 | | *Ubuntu LTS* | *Windows Server* | *Test Coverage* |
 
 | Key | Value |
 | :--- | :----- |
 | [License](https://choosealicense.com/) | [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) |
-<!--| [Development Doc](https://www.rdocumentation.org/) | [![Rdoc](https://img.shields.io/badge/pkgodwn-GitHub.io-orange.svg?longCache=true&style=style=for-the-badge)](https://ouhscbbmc.github.io/codified/) |-->
-<!--| [Zenodo Archive](https://zenodo.org/search?ln=en&p=codified) | [![DOI](https://zenodo.org/badge/146359325.svg)](https://zenodo.org/badge/latestdoi/146359325) |-->
-<!--| [CRAN Version](https://cran.r-project.org/package=codified) | [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/codified)](https://cran.r-project.org/package=codified) |
-| [CRAN Rate](http://cranlogs.r-pkg.org/) | ![CRANPace](http://cranlogs.r-pkg.org/badges/codified) |
-| [Production Doc](https://www.rdocumentation.org/) | [![Rdoc](http://www.rdocumentation.org/badges/version/codified)](http://www.rdocumentation.org/packages/codified) |
+<!--| [Development Doc](https://www.rdocumentation.org/) | [![Rdoc](https://img.shields.io/badge/pkgodwn-GitHub.io-orange.svg?longCache=true&style=style=for-the-badge)](https://ouhscbbmc.github.io/pluripotent/) |-->
+<!--| [Zenodo Archive](https://zenodo.org/search?ln=en&p=pluripotent) | [![DOI](https://zenodo.org/badge/146359325.svg)](https://zenodo.org/badge/latestdoi/146359325) |-->
+<!--| [CRAN Version](https://cran.r-project.org/package=pluripotent) | [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/pluripotent)](https://cran.r-project.org/package=pluripotent) |
+| [CRAN Rate](http://cranlogs.r-pkg.org/) | ![CRANPace](http://cranlogs.r-pkg.org/badges/pluripotent) |
+| [Production Doc](https://www.rdocumentation.org/) | [![Rdoc](http://www.rdocumentation.org/badges/version/pluripotent)](http://www.rdocumentation.org/packages/pluripotent) |
 -->
