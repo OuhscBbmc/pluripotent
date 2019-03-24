@@ -2,20 +2,27 @@
 % Please edit documentation in R/retrieve-file-list.R
 \name{retrieve_file_list}
 \alias{retrieve_file_list}
-\title{Retrieve files for a project}
+\alias{download_file_list}
+\title{Retrieve and download files for a project}
 \usage{
-retrieve_file_list(offspring, project_name = "new-project")
+download_file_list(offspring, project_name = "new-project",
+  destination_directory = "~")
 }
 \arguments{
 \item{offspring}{\link{character} of observed values in the investigation. Required.}
 
 \item{project_name}{\link{character} of the new project.  Defaults to \code{new-project}.}
+
+\item{destination_directory}{\link{character} of the files.  Defaults to \code{~} (\emph{i.e}, the home directory).}
 }
 \value{
 Table of files to copy
 }
 \description{
-Retrieve the complete list of files to be copied into a new project.
+\code{retrieve_file_list()} retrieve the complete list
+of files to be copied into a new project, while
+\code{download_file_list()} copies the files to the \code{destination_directory}
+on your local maachine.
 }
 \details{
 Currently, only one type of project is supported:
@@ -34,11 +41,18 @@ Each line represents one file that will be placed in the new project.  The colum
 }
 }
 \examples{
-library(magrittr)
+library(pluripotent)
 d1 <- retrieve_file_list("r-analysis-skeleton")
-d2 <- retrieve_file_list("r-analysis-skeleton")
 
+# path_testing   <- "data-public/testing"
+# d1$destination <- file.path(path_testing, d1$destination)
+# directories    <- unique(dirname(d1$destination))
+# purrr::walk(directories, ~dir.create(., recursive = TRUE))
 # download.file(d1$source, d1$destination)
+
+\dontrun{
+download_file_list("r-analysis-skeleton", "new-project", "./data-public/testing")
+}
 }
 \author{
 Will Beasley

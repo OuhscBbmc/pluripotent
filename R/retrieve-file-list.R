@@ -1,11 +1,18 @@
 #' @name retrieve_file_list
+#' @aliases retrieve_file_list download_file_list
 #'
-#' @title Retrieve files for a project
 #'
-#' @description Retrieve the complete list of files to be copied into a new project.
+#' @title Retrieve and download files for a project
+#'
+#' @description `retrieve_file_list()` retrieve the complete list
+#' of files to be copied into a new project, while
+#' `download_file_list()` copies the files to the `destination_directory`
+#' on your local maachine.
 #'
 #' @param offspring [character] of observed values in the investigation. Required.
 #' @param project_name [character] of the new project.  Defaults to `new-project`.
+#' @param destination_directory [character] of the files.  Defaults to `~` (*i.e*, the home directory).
+#'
 #' @return Table of files to copy
 #'
 #' @details
@@ -22,6 +29,7 @@
 #'
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data
+#' @importFrom utils download.file
 #'
 #' @author Will Beasley
 #'
@@ -29,9 +37,37 @@
 #' library(pluripotent)
 
 #' d1 <- retrieve_file_list("r-analysis-skeleton")
-#' d2 <- retrieve_file_list("r-analysis-skeleton")
 #'
+#' # path_testing   <- "data-public/testing"
+#' # d1$destination <- file.path(path_testing, d1$destination)
+#' # directories    <- unique(dirname(d1$destination))
+#' # purrr::walk(directories, ~dir.create(., recursive = TRUE))
 #' # download.file(d1$source, d1$destination)
+#'
+#' \dontrun{
+#' download_file_list("r-analysis-skeleton", "new-project", "./data-public/testing")
+#' }
+
+#' @export
+download_file_list <- function(
+  offspring,
+  project_name              = "new-project",
+  destination_directory     = "~"
+) {
+  d <- retrieve_file_list("r-analysis-skeleton")
+
+  d$destination   <- file.path(destination_directory, d$destination)
+  directories     <- unique(dirname(d$destination))
+
+  # browser()
+  directories[!dir.exists(directories)] %>%
+    purrr::walk(~dir.create(., recursive = T))
+
+  # list(d$source, d$destination) %>%
+  # mapply(function(x, y) download.file(x,y, mode="wb"),x = d$source, y = d$destination)
+  purrr::walk2(.x=d$source, .y=d$destination, .f=~utils::download.file(url=.x, destfile=.y))
+  # utils::download.file(d$source, d$destination)
+}
 
 #' @export
 retrieve_file_list <- function(
