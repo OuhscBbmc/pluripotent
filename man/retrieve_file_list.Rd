@@ -5,8 +5,15 @@
 \alias{download_file_list}
 \title{Retrieve and download files for a project}
 \usage{
-download_file_list(offspring, project_name = "new-project",
-  destination_directory = "~")
+retrieve_file_list(
+  offspring,
+  project_name = "new-project"
+)
+download_file_list(
+  offspring,
+  project_name  = "new-project",
+  destination_directory = "~"
+)
 }
 \arguments{
 \item{offspring}{\link{character} of observed values in the investigation. Required.}

@@ -15,6 +15,17 @@
 #'
 #' @return Table of files to copy
 #'
+#' @usage
+#' retrieve_file_list(
+#'   offspring,
+#'   project_name = "new-project"
+#' )
+#' download_file_list(
+#'   offspring,
+#'   project_name  = "new-project",
+#'   destination_directory = "~"
+#' )
+#'
 #' @details
 #' Currently, only one type of project is supported:
 #' 1. r-analysis-skeleton

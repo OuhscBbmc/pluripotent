@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Retrieve files for a project — retrieve_file_list • pluripotent</title>
+<title>Retrieve and download files for a project — retrieve_file_list • pluripotent</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,12 @@
 
 
 
-<meta property="og:title" content="Retrieve files for a project — retrieve_file_list" />
+<meta property="og:title" content="Retrieve and download files for a project — retrieve_file_list" />
 
-<meta property="og:description" content="Retrieve the complete list of files to be copied into a new project." />
+<meta property="og:description" content="retrieve_file_list() retrieve the complete list
+of files to be copied into a new project, while
+download_file_list() copies the files to the destination_directory
+on your local maachine." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -99,18 +102,29 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Retrieve files for a project</h1>
+    <h1>Retrieve and download files for a project</h1>
     <small class="dont-index">Source: <a href='https://github.com/OuhscBbmc/pluripotent/blob/master/R/retrieve-file-list.R'><code>R/retrieve-file-list.R</code></a></small>
     <div class="hidden name"><code>retrieve_file_list.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Retrieve the complete list of files to be copied into a new project.</p>
+    <p><code>retrieve_file_list()</code> retrieve the complete list
+of files to be copied into a new project, while
+<code>download_file_list()</code> copies the files to the <code>destination_directory</code>
+on your local maachine.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>retrieve_file_list</span>(<span class='no'>offspring</span>, <span class='kw'>project_name</span> <span class='kw'>=</span> <span class='st'>"new-project"</span>)</pre>
+    <pre class="usage"><span class='fu'>retrieve_file_list</span>(
+  <span class='no'>offspring</span>,
+  <span class='kw'>project_name</span> <span class='kw'>=</span> <span class='st'>"new-project"</span>
+)
+<span class='fu'>download_file_list</span>(
+  <span class='no'>offspring</span>,
+  <span class='kw'>project_name</span>  <span class='kw'>=</span> <span class='st'>"new-project"</span>,
+  <span class='kw'>destination_directory</span> <span class='kw'>=</span> <span class='st'>"~"</span>
+)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -122,6 +136,10 @@
     <tr>
       <th>project_name</th>
       <td><p><a href='https://www.rdocumentation.org/packages/base/topics/character'>character</a> of the new project.  Defaults to <code>new-project</code>.</p></td>
+    </tr>
+    <tr>
+      <th>destination_directory</th>
+      <td><p><a href='https://www.rdocumentation.org/packages/base/topics/character'>character</a> of the files.  Defaults to <code>~</code> (<em>i.e</em>, the home directory).</p></td>
     </tr>
     </table>
     
@@ -147,13 +165,16 @@ Each line represents one file that will be placed in the new project.  The colum
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>magrittr</span>)</div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>Attaching package: ‘magrittr’</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:testthat’:</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    equals, is_less_than, not</span></div><div class='input'><span class='no'>d1</span> <span class='kw'>&lt;-</span> <span class='fu'>retrieve_file_list</span>(<span class='st'>"r-analysis-skeleton"</span>)
-<span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'>retrieve_file_list</span>(<span class='st'>"r-analysis-skeleton"</span>)
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>pluripotent</span>)
+<span class='no'>d1</span> <span class='kw'>&lt;-</span> <span class='fu'>retrieve_file_list</span>(<span class='st'>"r-analysis-skeleton"</span>)
 
-<span class='co'># download.file(d1$source, d1$destination)</span></div></pre>
+<span class='co'># path_testing   &lt;- "data-public/testing"</span>
+<span class='co'># d1$destination &lt;- file.path(path_testing, d1$destination)</span>
+<span class='co'># directories    &lt;- unique(dirname(d1$destination))</span>
+<span class='co'># purrr::walk(directories, ~dir.create(., recursive = TRUE))</span>
+<span class='co'># download.file(d1$source, d1$destination)</span></div><span class='co'># NOT RUN {</span>
+<span class='fu'>download_file_list</span>(<span class='st'>"r-analysis-skeleton"</span>, <span class='st'>"new-project"</span>, <span class='st'>"./data-public/testing"</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
