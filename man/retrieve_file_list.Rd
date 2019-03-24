@@ -51,12 +51,6 @@ Each line represents one file that will be placed in the new project.  The colum
 library(pluripotent)
 d1 <- retrieve_file_list("r-analysis-skeleton")
 
-# path_testing   <- "data-public/testing"
-# d1$destination <- file.path(path_testing, d1$destination)
-# directories    <- unique(dirname(d1$destination))
-# purrr::walk(directories, ~dir.create(., recursive = TRUE))
-# download.file(d1$source, d1$destination)
-
 \dontrun{
 download_file_list("r-analysis-skeleton", "new-project", "./data-public/testing")
 }

@@ -46,14 +46,7 @@
 #'
 #' @examples
 #' library(pluripotent)
-
 #' d1 <- retrieve_file_list("r-analysis-skeleton")
-#'
-#' # path_testing   <- "data-public/testing"
-#' # d1$destination <- file.path(path_testing, d1$destination)
-#' # directories    <- unique(dirname(d1$destination))
-#' # purrr::walk(directories, ~dir.create(., recursive = TRUE))
-#' # download.file(d1$source, d1$destination)
 #'
 #' \dontrun{
 #' download_file_list("r-analysis-skeleton", "new-project", "./data-public/testing")
@@ -70,13 +63,11 @@ download_file_list <- function(
   d$destination   <- file.path(destination_directory, d$destination)
   directories     <- unique(dirname(d$destination))
 
-  # browser()
   directories[!dir.exists(directories)] %>%
     purrr::walk(~dir.create(., recursive = T))
 
-  # list(d$source, d$destination) %>%
-  # mapply(function(x, y) download.file(x,y, mode="wb"),x = d$source, y = d$destination)
   purrr::walk2(.x=d$source, .y=d$destination, .f=~utils::download.file(url=.x, destfile=.y))
+  # mapply(function(x, y) download.file(x,y, mode="wb"),x = d$source, y = d$destination)
   # utils::download.file(d$source, d$destination)
 }
 
@@ -97,7 +88,6 @@ retrieve_file_list <- function(
     source                  = readr::col_character()
   )
   d <- system.file("metadata", "file-to-copy.csv", package = "pluripotent", mustWork = TRUE) %>%
-    # "metadata/file-to-copy.csv" %>%
     readr::read_csv(col_types=col_types)
 
   checkmate::assert_tibble(d, min.rows = 1)
