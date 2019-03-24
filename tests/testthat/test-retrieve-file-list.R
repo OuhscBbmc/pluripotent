@@ -9,7 +9,7 @@ test_that("Smoke Test -Retrieve", {
 
 test_that("Retrieve", {
   d <- retrieve_file_list("r-analysis-skeleton")
-  expect_equal(nrow(d), 13L)
+  expect_equal(nrow(d), 47L)
 })
 
 test_that("Download", {
@@ -20,7 +20,7 @@ test_that("Download", {
   )
 
   file_count <- length(list.files(destination, all.files = T, recursive = T))
-  expect_equal(file_count, 13L)
+  expect_equal(file_count, 47L)
 
   unlink(destination, recursive = TRUE)
 })

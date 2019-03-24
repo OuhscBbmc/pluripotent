@@ -61,10 +61,17 @@ download_file_list <- function(
   d <- retrieve_file_list("r-analysis-skeleton")
 
   d$destination   <- file.path(destination_directory, d$destination)
-  directories     <- unique(dirname(d$destination))
+
+  # Sort so the correct nesting structure is represented.
+  #   This avoid the warning about creating an existing directory.
+  directories     <- sort(unique(dirname(d$destination)))
 
   directories[!dir.exists(directories)] %>%
     purrr::walk(~dir.create(., recursive = T))
+  # for( directory in directories ) {
+  #   if( !dir.exists(directories) )
+  #     dir.create(directory, recursive=T)
+  # }
 
   purrr::walk2(.x=d$source, .y=d$destination, .f=~utils::download.file(url=.x, destfile=.y))
   # mapply(function(x, y) download.file(x,y, mode="wb"),x = d$source, y = d$destination)
