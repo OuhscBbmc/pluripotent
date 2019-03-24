@@ -1,4 +1,14 @@
 offspring,destination_template,source
 r-analysis-skeleton,.gitignore,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.gitignore
 r-analysis-skeleton,{project-name}.Rproj,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/RAnalysisSkeleton.Rproj
-
+r-analysis-skeleton,.gitattributes,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.gitattributes
+r-analysis-skeleton,config.yml,https://raw.githubusercontent.com/wibeasley/RanalysisSkeleton/master/config.yml
+r-analysis-skeleton,manipulation/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/README.md
+r-analysis-skeleton,manipulation/car-ellis.R,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/manipulation/car-ellis.R
+r-analysis-skeleton,manipulation/mlm-ellis-1.R,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/mlm-ellis-1.R
+r-analysis-skeleton,manipulation/mlm-scribe-1.R,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/mlm-scribe-1.R
+r-analysis-skeleton,manipulation/randomization-block-simple.R,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/randomization-block-simple.R
+r-analysis-skeleton,manipulation/subject-1-ellis.R,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/subject-1-ellis.R
+r-analysis-skeleton,manipulation/te-ellis.R,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/te-ellis.R
+r-analysis-skeleton,manipulation/te-scribe.R,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/te-scribe.R
+r-analysis-skeleton,data-public/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/README.md

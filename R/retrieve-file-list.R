@@ -26,7 +26,7 @@
 #' @author Will Beasley
 #'
 #' @examples
-#' library(magrittr)
+#' library(pluripotent)
 
 #' d1 <- retrieve_file_list("r-analysis-skeleton")
 #' d2 <- retrieve_file_list("r-analysis-skeleton")
