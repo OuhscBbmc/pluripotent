@@ -60,7 +60,7 @@ download_file_list <- function(
 ) {
   d <- retrieve_file_list(offspring)
 
-  d$destination   <- file.path(destination_directory, d$destination)
+  # d$destination   <- file.path(destination_directory, d$destination)
 
   # Sort so the correct nesting structure is represented.
   #   This avoid the warning about creating an existing directory.
@@ -81,8 +81,11 @@ download_file_list <- function(
 #' @export
 retrieve_file_list <- function(
   offspring,
-  project_name = "new-project"
+  project_name = "new-project",
+  destination_directory     = "~"
 ) {
+  # return(8L)
+
   levels_offspring <- c(
     "r-analysis-skeleton"
   )
@@ -92,6 +95,7 @@ retrieve_file_list <- function(
   col_types <- readr::cols_only(
     offspring               = readr::col_character(),
     destination_template    = readr::col_character(),
+    destination_relative    = readr::col_character(),
     source                  = readr::col_character()
   )
   d <- system.file("metadata", "file-to-copy.csv", package = "pluripotent", mustWork = TRUE) %>%
@@ -104,11 +108,15 @@ retrieve_file_list <- function(
     types = c("character", "character", "character"),
     col.names = "strict"
   )
+  # browser()
 
   d %>%
-    dplyr::filter(.data$offspring == offspring) %>%
+    dplyr::filter(.data$offspring == !!offspring) %>%
     dplyr::mutate(
-      destination   = gsub("\\{project-name\\}", project_name, .data$destination_template)
+      destination   = gsub("\\{project-name\\}", project_name, .data$destination_template),
+      destination   = file.path(.data$destination_directory, .data$destination),
+      destination   = dplyr::if_else(.data$destination_relative, path.expand(.data$destination), .data$destination)
     ) %>%
     dplyr::select(.data$destination, .data$destination_template, .data$source)
+
 }

@@ -90,7 +90,7 @@ retrieve_file_list <- function(
   checkmate::assert_tibble(d, min.rows = 1)
 
   d %>%
-    dplyr::filter(.data$offspring == offspring) %>%
+    dplyr::filter(.data$offspring == !!offspring) %>%
     dplyr::mutate(
       destination   = gsub("\\{project-name\\}", project_name, .data$destination_template)
     ) %>%

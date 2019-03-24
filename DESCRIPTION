@@ -1,8 +1,8 @@
 Package: pluripotent
 Title: Generate an embryonic repository
 Description: Repeatedly generate an embryonic repository with one command.
-Version: 0.1.1.9001
-Date: 2019-03-22
+Version: 0.1.1.9003
+Date: 2019-03-24
 Authors@R: c(person("Will", "Beasley", role = c("aut", "cre"), email =
     "wibeasley@hotmail.com", comment = c(ORCID = "0000-0002-5613-5006")),
     person("Andriy", "Koval",
