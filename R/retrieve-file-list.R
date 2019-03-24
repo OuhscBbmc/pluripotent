@@ -58,7 +58,7 @@ download_file_list <- function(
   project_name              = "new-project",
   destination_directory     = "~"
 ) {
-  d <- retrieve_file_list("r-analysis-skeleton")
+  d <- retrieve_file_list(offspring)
 
   d$destination   <- file.path(destination_directory, d$destination)
 
@@ -97,7 +97,13 @@ retrieve_file_list <- function(
   d <- system.file("metadata", "file-to-copy.csv", package = "pluripotent", mustWork = TRUE) %>%
     readr::read_csv(col_types=col_types)
 
-  checkmate::assert_tibble(d, min.rows = 1)
+  checkmate::assert_tibble(
+    d,
+    min.rows      = 1,
+    any.missing   = F,
+    types = c("character", "character", "character"),
+    col.names = "strict"
+  )
 
   d %>%
     dplyr::filter(.data$offspring == offspring) %>%

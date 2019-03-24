@@ -46,3 +46,17 @@ r-analysis-skeleton,utility/install-packages.R,https://raw.githubusercontent.com
 r-analysis-skeleton,utility/package-dependency-list.csv,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/utility/package-dependency-list.csv
 r-analysis-skeleton,utility/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/utility/README.md
 r-analysis-skeleton,utility/reproduce.R,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/utility/reproduce.R
+cdw-skeleton-1,.gitignore,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.gitignore
+cdw-skeleton-1,{project-name}.Rproj,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/RAnalysisSkeleton.Rproj
+cdw-skeleton-1,.gitattributes,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.gitattributes
+cdw-skeleton-1,manipulation/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/README.md
+cdw-skeleton-1,analysis/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/analysis/README.md
+cdw-skeleton-1,data-public/derived/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/derived/README.md
+cdw-skeleton-1,data-public/raw/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/raw/README.md
+cdw-skeleton-1,data-public/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/README.md
+cdw-skeleton-1,data-unshared/contents.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-unshared/contents.md
+cdw-skeleton-1,data-unshared/derived/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-unshared/derived/README.md
+cdw-skeleton-1,data-unshared/raw/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-unshared/raw/README.md
+cdw-skeleton-1,data-unshared/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-unshared/README.md
+cdw-skeleton-1,documentation/irb/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/documentation/irb/README.md
+cdw-skeleton-1,documentation/README.md,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/documentation/README.md
