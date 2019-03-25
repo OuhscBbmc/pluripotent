@@ -67,32 +67,3 @@ start_r_analysis_skeleton <- function(
   # mapply(function(x, y) download.file(x,y, mode="wb"),x = d$source, y = d$destination)
   # utils::download.file(d$source, d$destination)
 }
-
-#' @export
-retrieve_file_list <- function(
-  offspring,
-  project_name = "new-project"
-) {
-  levels_offspring <- c(
-    "r-analysis-skeleton"
-  )
-  checkmate::assert_character( offspring          , any.missing=F, min.chars=1, len=1)
-  checkmate::assert_subset(    offspring          , levels_offspring, empty.ok = F)
-
-  col_types <- readr::cols_only(
-    offspring               = readr::col_character(),
-    destination_template    = readr::col_character(),
-    source                  = readr::col_character()
-  )
-  d <- system.file("metadata", "file-to-copy.csv", package = "pluripotent", mustWork = TRUE) %>%
-    readr::read_csv(col_types=col_types)
-
-  checkmate::assert_tibble(d, min.rows = 1)
-
-  d %>%
-    dplyr::filter(.data$offspring == !!offspring) %>%
-    dplyr::mutate(
-      destination   = gsub("\\{project-name\\}", project_name, .data$destination_template)
-    ) %>%
-    dplyr::select(.data$destination, .data$destination_template, .data$source)
-}
