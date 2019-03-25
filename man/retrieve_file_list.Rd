@@ -7,7 +7,8 @@
 \usage{
 retrieve_file_list(
   offspring,
-  project_name = "new-project"
+  project_name = "new-project",
+  destination_directory = "~"
 )
 download_file_list(
   offspring,

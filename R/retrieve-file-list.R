@@ -59,9 +59,11 @@ download_file_list <- function(
   project_name              = "new-project",
   destination_directory     = "~"
 ) {
-  d <- retrieve_file_list(offspring)
-
-  # d$destination   <- file.path(destination_directory, d$destination)
+  d <- retrieve_file_list(
+    offspring,
+    project_name            = project_name,
+    destination_directory   = destination_directory
+  )
 
   # Sort so the correct nesting structure is represented.
   #   This avoid the warning about creating an existing directory.
@@ -113,9 +115,8 @@ retrieve_file_list <- function(
     dplyr::filter(.data$offspring == !!offspring) %>%
     dplyr::mutate(
       destination   = gsub("\\{project-name\\}", project_name, .data$destination_template),
-      destination   = file.path(destination_directory, .data$destination),
-      destination   = dplyr::if_else(.data$destination_relative, path.expand(.data$destination), .data$destination)
+      destination   = file.path(destination_directory, .data$destination)
+      # destination   = dplyr::if_else(.data$destination_relative, path.expand(.data$destination), .data$destination)
     ) %>%
     dplyr::select(.data$destination, .data$destination_template, .data$source)
-
 }
