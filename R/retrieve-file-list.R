@@ -115,7 +115,7 @@ retrieve_file_list <- function(
     dplyr::filter(.data$offspring == !!offspring) %>%
     dplyr::mutate(
       destination   = gsub("\\{project-name\\}", project_name, .data$destination_template),
-      destination   = file.path(destination_directory, .data$destination)
+      destination   = dplyr::if_else(.data$destination_relative, file.path(destination_directory, .data$destination), .data$destination)
       # destination   = dplyr::if_else(.data$destination_relative, path.expand(.data$destination), .data$destination)
     ) %>%
     dplyr::select(.data$destination, .data$destination_template, .data$source)
