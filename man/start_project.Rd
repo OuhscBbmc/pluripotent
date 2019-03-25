@@ -8,11 +8,11 @@
 \usage{
 start_r_analysis_skeleton(
   project_name  = "new-project-analysis",
-  destination_directory = "~/new-project-analysis"
+  destination_directory = file.path("~/analysis", project_name)
 )
 start_cdw_skeleton_1(
   project_name  = "new-project-cdw",
-  destination_directory = "~/new-project-cdw"
+  destination_directory = file.path("~/cdw", project_name)
 )
 }
 \arguments{
@@ -25,9 +25,10 @@ start_cdw_skeleton_1(
 to the \code{destination_directory} on your local maachine.
 }
 \details{
-Currently, only one type of project is supported:
+Currently, two types of project is supported:
 \enumerate{
 \item r-analysis-skeleton
+\item cdw-sekeleton-1
 }
 }
 \note{

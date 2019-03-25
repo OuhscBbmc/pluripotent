@@ -14,16 +14,17 @@
 #' @usage
 #' start_r_analysis_skeleton(
 #'   project_name  = "new-project-analysis",
-#'   destination_directory = "~/new-project-analysis"
+#'   destination_directory = file.path("~/analysis", project_name)
 #' )
 #' start_cdw_skeleton_1(
 #'   project_name  = "new-project-cdw",
-#'   destination_directory = "~/new-project-cdw"
+#'   destination_directory = file.path("~/cdw", project_name)
 #' )
 #'
 #' @details
-#' Currently, only one type of project is supported:
+#' Currently, two types of project is supported:
 #' 1. r-analysis-skeleton
+#' 1. cdw-sekeleton-1
 #'
 #' @note
 #' To view the files involved in each project type,
@@ -49,7 +50,7 @@
 #' @export
 start_r_analysis_skeleton <- function(
   project_name              = "new-project-analysis",
-  destination_directory     = "~/new-project-analysis"
+  destination_directory     = file.path("~/analysis", project_name)
 ) {
   offspring <- "r-analysis-skeleton"
   d <- retrieve_file_list(
@@ -72,7 +73,7 @@ start_r_analysis_skeleton <- function(
 #' @export
 start_cdw_skeleton_1 <- function(
   project_name              = "new-project-cdw",
-  destination_directory     = "~/new-project-cdw"
+  destination_directory     = file.path("~/cdw", project_name)
 ) {
   offspring <- "cdw-skeleton-1"
   d <- retrieve_file_list(
