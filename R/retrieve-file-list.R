@@ -18,7 +18,8 @@
 #' @usage
 #' retrieve_file_list(
 #'   offspring,
-#'   project_name = "new-project"
+#'   project_name = "new-project",
+#'   destination_directory = "~"
 #' )
 #' download_file_list(
 #'   offspring,
@@ -46,14 +47,7 @@
 #'
 #' @examples
 #' library(pluripotent)
-
 #' d1 <- retrieve_file_list("r-analysis-skeleton")
-#'
-#' # path_testing   <- "data-public/testing"
-#' # d1$destination <- file.path(path_testing, d1$destination)
-#' # directories    <- unique(dirname(d1$destination))
-#' # purrr::walk(directories, ~dir.create(., recursive = TRUE))
-#' # download.file(d1$source, d1$destination)
 #'
 #' \dontrun{
 #' download_file_list("r-analysis-skeleton", "new-project", "./data-public/testing")
@@ -65,28 +59,38 @@ download_file_list <- function(
   project_name              = "new-project",
   destination_directory     = "~"
 ) {
-  d <- retrieve_file_list("r-analysis-skeleton")
+  d <- retrieve_file_list(
+    offspring,
+    project_name            = project_name,
+    destination_directory   = destination_directory
+  )
 
-  d$destination   <- file.path(destination_directory, d$destination)
-  directories     <- unique(dirname(d$destination))
+  # Sort so the correct nesting structure is represented.
+  #   This avoid the warning about creating an existing directory.
+  directories     <- sort(unique(dirname(d$destination)))
 
-  # browser()
   directories[!dir.exists(directories)] %>%
     purrr::walk(~dir.create(., recursive = T))
+  # for( directory in directories ) {
+  #   if( !dir.exists(directories) )
+  #     dir.create(directory, recursive=T)
+  # }
 
-  # list(d$source, d$destination) %>%
-  # mapply(function(x, y) download.file(x,y, mode="wb"),x = d$source, y = d$destination)
   purrr::walk2(.x=d$source, .y=d$destination, .f=~utils::download.file(url=.x, destfile=.y))
+  # mapply(function(x, y) download.file(x,y, mode="wb"),x = d$source, y = d$destination)
   # utils::download.file(d$source, d$destination)
 }
 
 #' @export
 retrieve_file_list <- function(
   offspring,
-  project_name = "new-project"
+  project_name = "new-project",
+  destination_directory     = "~"
 ) {
+
   levels_offspring <- c(
-    "r-analysis-skeleton"
+    "r-analysis-skeleton",
+    "cdw-skeleton-1"
   )
   checkmate::assert_character( offspring          , any.missing=F, min.chars=1, len=1)
   checkmate::assert_subset(    offspring          , levels_offspring, empty.ok = F)
@@ -94,18 +98,26 @@ retrieve_file_list <- function(
   col_types <- readr::cols_only(
     offspring               = readr::col_character(),
     destination_template    = readr::col_character(),
+    destination_relative    = readr::col_logical(),
     source                  = readr::col_character()
   )
   d <- system.file("metadata", "file-to-copy.csv", package = "pluripotent", mustWork = TRUE) %>%
-    # "metadata/file-to-copy.csv" %>%
     readr::read_csv(col_types=col_types)
 
-  checkmate::assert_tibble(d, min.rows = 1)
+  checkmate::assert_tibble(
+    d,
+    min.rows      = 1,
+    any.missing   = F,
+    types = c("character", "character", "logical", "character"),
+    col.names = "strict"
+  )
 
   d %>%
-    dplyr::filter(.data$offspring == offspring) %>%
+    dplyr::filter(.data$offspring == !!offspring) %>%
     dplyr::mutate(
-      destination   = gsub("\\{project-name\\}", project_name, .data$destination_template)
+      destination   = gsub("\\{project-name\\}", project_name, .data$destination_template),
+      destination   = dplyr::if_else(.data$destination_relative, file.path(destination_directory, .data$destination), .data$destination)
+      # destination   = dplyr::if_else(.data$destination_relative, path.expand(.data$destination), .data$destination)
     ) %>%
     dplyr::select(.data$destination, .data$destination_template, .data$source)
 }

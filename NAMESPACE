@@ -2,6 +2,8 @@
 
 export(download_file_list)
 export(retrieve_file_list)
+export(start_cdw_skeleton_1)
+export(start_r_analysis_skeleton)
 importFrom(magrittr,"%>%")
 importFrom(rlang,.data)
 importFrom(utils,download.file)
