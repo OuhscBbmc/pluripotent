@@ -66,7 +66,7 @@ on your local maachine." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pluripotent</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1.9003</span>
       </span>
     </div>
 
@@ -118,12 +118,13 @@ on your local maachine.</p>
 
     <pre class="usage"><span class='fu'>retrieve_file_list</span>(
   <span class='no'>offspring</span>,
-  <span class='kw'>project_name</span> <span class='kw'>=</span> <span class='st'>"new-project"</span>
+  <span class='kw'>project_name</span> <span class='kw'>=</span> <span class='st'>"new-project"</span>,
+  <span class='kw'>destination_directory</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/file.path'>file.path</a></span>(<span class='st'>"~"</span>, <span class='no'>project_name</span>)
 )
 <span class='fu'>download_file_list</span>(
   <span class='no'>offspring</span>,
   <span class='kw'>project_name</span>  <span class='kw'>=</span> <span class='st'>"new-project"</span>,
-  <span class='kw'>destination_directory</span> <span class='kw'>=</span> <span class='st'>"~"</span>
+  <span class='kw'>destination_directory</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/file.path'>file.path</a></span>(<span class='st'>"~"</span>, <span class='no'>project_name</span>)
 )</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -149,8 +150,9 @@ on your local maachine.</p>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Currently, only one type of project is supported:</p><ol>
+    <p>Currently, two types of project is supported:</p><ol>
 <li><p>r-analysis-skeleton</p></li>
+<li><p>cdw-sekeleton-1</p></li>
 </ol>
     
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
@@ -166,13 +168,7 @@ Each line represents one file that will be placed in the new project.  The colum
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>pluripotent</span>)
-<span class='no'>d1</span> <span class='kw'>&lt;-</span> <span class='fu'>retrieve_file_list</span>(<span class='st'>"r-analysis-skeleton"</span>)
-
-<span class='co'># path_testing   &lt;- "data-public/testing"</span>
-<span class='co'># d1$destination &lt;- file.path(path_testing, d1$destination)</span>
-<span class='co'># directories    &lt;- unique(dirname(d1$destination))</span>
-<span class='co'># purrr::walk(directories, ~dir.create(., recursive = TRUE))</span>
-<span class='co'># download.file(d1$source, d1$destination)</span></div><span class='co'># NOT RUN {</span>
+<span class='no'>d1</span> <span class='kw'>&lt;-</span> <span class='fu'>retrieve_file_list</span>(<span class='st'>"r-analysis-skeleton"</span>)</div><span class='co'># NOT RUN {</span>
 <span class='fu'>download_file_list</span>(<span class='st'>"r-analysis-skeleton"</span>, <span class='st'>"new-project"</span>, <span class='st'>"./data-public/testing"</span>)
 <span class='co'># }</span></pre>
   </div>
