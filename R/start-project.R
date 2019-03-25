@@ -45,6 +45,8 @@
 #'
 #' \dontrun{
 #' start_r_analysis_skeleton("new-project", "./data-public/testing")
+#' start_cdw_skeleton_1()
+#' start_cdw_skeleton_1("thumann-awesomeness-4")
 #' }
 
 #' @export
