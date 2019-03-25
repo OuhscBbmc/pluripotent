@@ -3,11 +3,16 @@
 \name{start_project}
 \alias{start_project}
 \alias{start_r_analysis_skeleton}
+\alias{start_cdw_skeleton_1}
 \title{Start specific projects project}
 \usage{
 start_r_analysis_skeleton(
-  project_name  = "new-project",
-  destination_directory = "~"
+  project_name  = "new-project-analysis",
+  destination_directory = "~/new-project-analysis"
+)
+start_cdw_skeleton_1(
+  project_name  = "new-project-cdw",
+  destination_directory = "~/new-project-cdw"
 )
 }
 \arguments{

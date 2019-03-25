@@ -1,5 +1,5 @@
 #' @name start_project
-#' @aliases start_r_analysis_skeleton
+#' @aliases start_r_analysis_skeleton start_cdw_skeleton_1
 #'
 #'
 #' @title Start specific projects project
@@ -13,8 +13,12 @@
 #'
 #' @usage
 #' start_r_analysis_skeleton(
-#'   project_name  = "new-project",
-#'   destination_directory = "~"
+#'   project_name  = "new-project-analysis",
+#'   destination_directory = "~/new-project-analysis"
+#' )
+#' start_cdw_skeleton_1(
+#'   project_name  = "new-project-cdw",
+#'   destination_directory = "~/new-project-cdw"
 #' )
 #'
 #' @details
@@ -44,13 +48,16 @@
 
 #' @export
 start_r_analysis_skeleton <- function(
-  project_name              = "new-project",
-  destination_directory     = "~"
+  project_name              = "new-project-analysis",
+  destination_directory     = "~/new-project-analysis"
 ) {
   offspring <- "r-analysis-skeleton"
-  d <- retrieve_file_list("r-analysis-skeleton")
-
-  d$destination   <- file.path(destination_directory, d$destination)
+  d <- retrieve_file_list(
+    offspring             = offspring,
+    project_name          = project_name,
+    destination_directory = destination_directory
+  )
+  # browser()
 
   # Sort so the correct nesting structure is represented.
   #   This avoid the warning about creating an existing directory.
@@ -58,12 +65,26 @@ start_r_analysis_skeleton <- function(
 
   directories[!dir.exists(directories)] %>%
     purrr::walk(~dir.create(., recursive = T))
-  # for( directory in directories ) {
-  #   if( !dir.exists(directories) )
-  #     dir.create(directory, recursive=T)
-  # }
 
   purrr::walk2(.x=d$source, .y=d$destination, .f=~utils::download.file(url=.x, destfile=.y))
-  # mapply(function(x, y) download.file(x,y, mode="wb"),x = d$source, y = d$destination)
-  # utils::download.file(d$source, d$destination)
+}
+
+#' @export
+start_cdw_skeleton_1 <- function(
+  project_name              = "new-project-cdw",
+  destination_directory     = "~/new-project-cdw"
+) {
+  offspring <- "cdw-skeleton-1"
+  d <- retrieve_file_list(
+    offspring             = offspring,
+    project_name          = project_name,
+    destination_directory = destination_directory
+  )
+
+  directories     <- sort(unique(dirname(d$destination)))
+
+  directories[!dir.exists(directories)] %>%
+    purrr::walk(~dir.create(., recursive = T))
+
+  purrr::walk2(.x=d$source, .y=d$destination, .f=~utils::download.file(url=.x, destfile=.y))
 }
