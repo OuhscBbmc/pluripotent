@@ -52,9 +52,11 @@
 #' @export
 start_r_analysis_skeleton <- function(
   project_name              = "new-project-analysis",
-  destination_directory     = file.path("~/analysis", project_name)
+  destination_directory     = "~/analysis"
 ) {
   offspring <- "r-analysis-skeleton"
+  destination_directory_full <- file.path(destination_directory, project_name)
+
   d <- retrieve_file_list(
     offspring             = offspring,
     project_name          = project_name,
@@ -75,13 +77,15 @@ start_r_analysis_skeleton <- function(
 #' @export
 start_cdw_skeleton_1 <- function(
   project_name              = "new-project-cdw",
-  destination_directory     = file.path("~/cdw", project_name)
+  destination_directory     = "~/cdw"
 ) {
   offspring <- "cdw-skeleton-1"
+  destination_directory_full <- file.path(destination_directory, project_name)
+
   d <- retrieve_file_list(
     offspring             = offspring,
     project_name          = project_name,
-    destination_directory = destination_directory
+    destination_directory = destination_directory_full
   )
 
   directories     <- sort(unique(dirname(d$destination)))
