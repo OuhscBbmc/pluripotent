@@ -8,11 +8,11 @@
 \usage{
 start_r_analysis_skeleton(
   project_name  = "new-project-analysis",
-  destination_directory = file.path("~/analysis", project_name)
+  destination_directory = "~/analysis"
 )
 start_cdw_skeleton_1(
   project_name  = "new-project-cdw",
-  destination_directory = file.path("~/cdw", project_name)
+  destination_directory = "~/cdw"
 )
 }
 \arguments{
