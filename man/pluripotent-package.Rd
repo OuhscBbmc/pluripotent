@@ -6,7 +6,8 @@
 \alias{pluripotent-package}
 \title{pluripotent: Generate an embryonic repository}
 \description{
-Repeatedly generate an embryonic repository with one command.
+Repeatedly generate an embryonic repository with
+    one command.
 }
 \seealso{
 Useful links:

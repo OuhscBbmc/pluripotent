@@ -8,12 +8,12 @@
 retrieve_file_list(
   offspring,
   project_name = "new-project",
-  destination_directory = "~"
+  destination_directory = file.path("~", project_name)
 )
 download_file_list(
   offspring,
   project_name  = "new-project",
-  destination_directory = "~"
+  destination_directory = file.path("~", project_name)
 )
 }
 \arguments{
@@ -33,9 +33,10 @@ of files to be copied into a new project, while
 on your local maachine.
 }
 \details{
-Currently, only one type of project is supported:
+Currently, two types of project is supported:
 \enumerate{
 \item r-analysis-skeleton
+\item cdw-sekeleton-1
 }
 }
 \note{

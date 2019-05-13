@@ -19,17 +19,18 @@
 #' retrieve_file_list(
 #'   offspring,
 #'   project_name = "new-project",
-#'   destination_directory = "~"
+#'   destination_directory = file.path("~", project_name)
 #' )
 #' download_file_list(
 #'   offspring,
 #'   project_name  = "new-project",
-#'   destination_directory = "~"
+#'   destination_directory = file.path("~", project_name)
 #' )
 #'
 #' @details
-#' Currently, only one type of project is supported:
+#' Currently, two types of project is supported:
 #' 1. r-analysis-skeleton
+#' 1. cdw-sekeleton-1
 #'
 #' @note
 #' To view the files involved in each project type,
@@ -57,7 +58,7 @@
 download_file_list <- function(
   offspring,
   project_name              = "new-project",
-  destination_directory     = "~"
+  destination_directory     = file.path("~", project_name)
 ) {
   d <- retrieve_file_list(
     offspring,
@@ -85,7 +86,7 @@ download_file_list <- function(
 retrieve_file_list <- function(
   offspring,
   project_name = "new-project",
-  destination_directory     = "~"
+  destination_directory     = file.path("~", project_name)
 ) {
 
   levels_offspring <- c(
