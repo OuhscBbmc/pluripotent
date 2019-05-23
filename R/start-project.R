@@ -54,24 +54,13 @@ start_r_analysis_skeleton <- function(
   project_name              = "new-project-analysis",
   destination_directory     = "~/analysis"
 ) {
-  offspring <- "r-analysis-skeleton"
-  destination_directory_full <- file.path(destination_directory, project_name)
 
-  d <- retrieve_file_list(
-    offspring             = offspring,
+  start_skeleton(
+    offspring_type        = "r-analysis-skeleton",
     project_name          = project_name,
     destination_directory = destination_directory
   )
-  # browser()
 
-  # Sort so the correct nesting structure is represented.
-  #   This avoid the warning about creating an existing directory.
-  directories     <- sort(unique(dirname(d$destination)))
-
-  directories[!dir.exists(directories)] %>%
-    purrr::walk(~dir.create(., recursive = T))
-
-  purrr::walk2(.x=d$source, .y=d$destination, .f=~utils::download.file(url=.x, destfile=.y))
 }
 
 #' @export
@@ -79,11 +68,24 @@ start_cdw_skeleton_1 <- function(
   project_name              = "new-project-cdw",
   destination_directory     = "~/cdw"
 ) {
-  offspring <- "cdw-skeleton-1"
+
+  start_skeleton(
+    offspring_type        = "cdw-skeleton-1",
+    project_name          = project_name,
+    destination_directory = destination_directory
+  )
+
+}
+
+start_skeleton <- function(
+  offspring_type,
+  project_name,
+  destination_directory     = "~"
+) {
   destination_directory_full <- file.path(destination_directory, project_name)
 
   d <- retrieve_file_list(
-    offspring             = offspring,
+    offspring             = offspring_type,
     project_name          = project_name,
     destination_directory = destination_directory_full
   )
