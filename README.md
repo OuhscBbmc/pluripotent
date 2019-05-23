@@ -12,7 +12,7 @@ The two projects I immediately want to support are
 I hope that a new project/repo called 'patient-health' can be generated in three ways:
 1. a single like of code like
     ```r
-    pluripotent::seed_skeleton("~/GitHub/patient-health)
+   pluripotent::start_cdw_skeleton_1("henry-intubate-1", "~/Bbmc/cdw")
     ```
 1. an RStudio [addin](https://rstudio.github.io/rstudioaddins/), which has been nice for our [OuhscMunge package](http://ouhscbbmc.github.io/OuhscMunge/reference/install_packages_addin.html)
 1. a Gist-base function, like what's [worked well for installing packages](https://github.com/OuhscBbmc/RedcapExamplesAndPatterns/blob/master/DocumentationGlobal/ResourcesInstallation.md#installation-required) in a new system.  Maybe something like
