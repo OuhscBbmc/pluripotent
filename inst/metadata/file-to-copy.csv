@@ -3,6 +3,7 @@ r-analysis-skeleton,.gitignore,TRUE,https://raw.githubusercontent.com/wibeasley/
 r-analysis-skeleton,{project-name}.Rproj,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/RAnalysisSkeleton.Rproj
 r-analysis-skeleton,.gitattributes,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.gitattributes
 r-analysis-skeleton,config.yml,TRUE,https://raw.githubusercontent.com/wibeasley/RanalysisSkeleton/master/config.yml
+r-analysis-skeleton,flow.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/flow.R
 r-analysis-skeleton,manipulation/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/README.md
 r-analysis-skeleton,manipulation/car-ellis.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/car-ellis.R
 r-analysis-skeleton,manipulation/mlm-ellis-1.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/mlm-1-ellis.R
@@ -45,7 +46,6 @@ r-analysis-skeleton,utility/eager.gitignore,TRUE,https://raw.githubusercontent.c
 r-analysis-skeleton,utility/install-packages.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/utility/install-packages.R
 r-analysis-skeleton,utility/package-dependency-list.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/utility/package-dependency-list.csv
 r-analysis-skeleton,utility/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/utility/README.md
-r-analysis-skeleton,utility/reproduce.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/utility/reproduce.R
 cdw-skeleton-1,.gitignore,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.gitignore
 cdw-skeleton-1,{project-name}.Rproj,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/RAnalysisSkeleton.Rproj
 cdw-skeleton-1,.gitattributes,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.gitattributes
