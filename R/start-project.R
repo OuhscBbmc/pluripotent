@@ -2,7 +2,7 @@
 #' @aliases start_r_analysis_skeleton start_cdw_skeleton_1
 #'
 #'
-#' @title Start specific projects project
+#' @title Start specific projects
 #'
 #' @description `start_r_analysis_skeleton()` copies the files
 #' to the `destination_directory` on your local maachine.
@@ -94,6 +94,8 @@ start_skeleton <- function(
 
   directories[!dir.exists(directories)] %>%
     purrr::walk(~dir.create(., recursive = T))
+
+  #   browser()
 
   purrr::walk2(.x=d$source, .y=d$destination, .f=~utils::download.file(url=.x, destfile=.y))
 }
