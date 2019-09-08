@@ -79,7 +79,7 @@ cdw-skeleton-1,S:/BBMC/prairie-outpost/{project-name}/data-public/sweep-and-spec
 cdw-skeleton-1,analysis/inspection/inspection.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/analysis/inspection/inspection.R
 cdw-skeleton-1,config.yml,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/config.yml
 cdw-skeleton-1,manipulation/csv-report-generator.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/manipulation/csv-report-generator.R
-cdw-skeleton-1,manipulation/flow.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/manipulation/flow.R
+cdw-skeleton-1,flow.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/flow.R
 cdw-skeleton-1,manipulation/sweep-and-specify/get-sweep-and-specify.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/manipulation/sweep-and-specify/get-sweep-and-specify.R
 cdw-skeleton-1,manipulation/sweep-and-specify/post-sweep-and-specify.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/manipulation/sweep-and-specify/post-sweep-and-specify.R
 cdw-skeleton-1,manipulation/sweep-and-specify/sql/review-required-centricity-diagnosis.sql,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/manipulation/sweep-and-specify/sql/review-required-centricity-diagnosis.sql
