@@ -1,7 +1,13 @@
 rm(list=ls(all.names=TRUE))
 library(magrittr)
 
-path_in   <- "/home/wibeasley/Documents/OuhscBbmc/cdw/cdw-skeleton-1/config.yml"
+# Run this line to update to the newest config file:
+# utils::download.file(
+#   url       = "https://github.com/OuhscBbmc/cdw-skeleton-1/blob/master/config.yml?raw=true",
+#   destfile  = "./inst/tests/config.yml"
+# )
+
+path_in    <- system.file("tests/config.yml", package = "pluripotent")
 path_out  <- "testing/new-project-cdw/config-out.yml"
 template  <- readr::read_file(path_in)
 config <- config::get(file=path_in)
