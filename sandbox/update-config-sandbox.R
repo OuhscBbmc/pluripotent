@@ -8,7 +8,7 @@ library(magrittr)
 # )
 
 path_in    <- system.file("tests/config.yml", package = "pluripotent")
-path_out  <- "testing/new-project-cdw/config-out.yml"
+path_out  <- "inst/tests/config-out-expected.yml"
 template  <- readr::read_file(path_in)
 config <- config::get(file=path_in)
 
