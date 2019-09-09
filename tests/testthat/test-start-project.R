@@ -25,12 +25,16 @@ test_that("start_cdw_skeleton", {
   )
 
   file_count <- length(list.files(destination, all.files = T, recursive = T))
-  expect_equal(file_count, 41L)
+  expect_equal(file_count, 42L)
 
   # There are really 57 files, but 16 go to the S drive,
   #   and I don't know how to capture & test that.
 
   unlink(destination, recursive = TRUE)
+
+  if( R.version$os=="linux-gnu" ) {
+    unlink("./S:"     , recursive = TRUE)
+  }
 })
 
 # test_that("Retrieve", {
