@@ -36,7 +36,6 @@ populate_config <- function( path_in, project_name, path_out = path_in ) {
 
   value <-
     template %>%
-    # substr(1,2000) %>%
     gsub("\\{directory_output\\}", config$directory_output, .) %>%
     gsub("\\{directory_file_server\\}", config$directory_file_server, .) %>%
     gsub("\\{project_name\\}", project_name, .) %>%
