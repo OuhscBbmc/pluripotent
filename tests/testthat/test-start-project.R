@@ -14,6 +14,11 @@ test_that("start_r_analysis_skeleton", {
 })
 
 test_that("start_cdw_skeleton", {
+
+  # The 'S:/' tests look for an actual mapped drive in Windows/AppVeyor
+  #  But Linux/Travis creates a local subdirectory literally called `S:/`
+  testthat::skip_on_appveyor()
+
   destination <- "./testing"
   start_cdw_skeleton_1(
     destination_directory = destination
