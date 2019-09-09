@@ -1,20 +1,48 @@
 rm(list=ls(all.names=TRUE))
+library(magrittr)
 
 path_in   <- "/home/wibeasley/Documents/OuhscBbmc/cdw/cdw-skeleton-1/config.yml"
 path_out  <- "testing/new-project-cdw/config-out.yml"
 template  <- readr::read_file(path_in)
-# config <- config::get(file=path_in)
+config <- config::get(file=path_in)
 
 project_name  <- "thumann-awesomeness-1"
 # schema_name   <- gsub("-", "_", project_name)
+config$project_name
+config$directory_file_server
+config$directory_output
+# value <-
+#   glue::glue(
+#     paste0(template, "\n"),
+#     project_name            = project_name,
+#     schema_name             = gsub("-", "_", project_name),
+#     directory_file_server   = "{directory_file_server}",
+#     directory_output        = "{directory_output}"
+#   )
+# cat(value)
+
+# a <- yaml::yaml.load(value)
+# a$default$project_name
+# config::get(
+#
+# )
 value <-
-  glue::glue(
-    paste0(template, "\n"),
-    project_name            = project_name,
-    schema_name             = gsub("-", "_", project_name),
-    path_directory          = "{path_directory}",
-    path_directory_output   = "{path_directory_output}"
-  )
+  template %>%
+  # substr(1,2000) %>%
+  gsub("\\{directory_output\\}", config$directory_output, .) %>%
+  gsub("\\{directory_file_server\\}", config$directory_file_server, .) %>%
+  gsub("\\{project_name\\}", project_name, .) %>%
+  gsub("\\{schema_name\\}", gsub("-", "_", project_name), .) #%>%
+  # cat()
+
+# %>%
+#   glue::glue(
+#     directory_file_server   = "{directory_file_server}",
+#     directory_output        = "{directory_output}"
+#     )
+
+
+cat(value)
 
 readr::write_file(value, path_out)
 # yaml::write_yaml(s, path_out)

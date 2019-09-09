@@ -32,15 +32,15 @@
 populate_config <- function( path_in, project_name, path_out = path_in ) {
 
   template  <- readr::read_file(path_in)
+  config    <- config::get(file=path_in)
 
   value <-
-    glue::glue(
-      paste0(template, "\n"),
-      project_name            = project_name,
-      schema_name             = gsub("-", "_", project_name),
-      path_directory          = "{path_directory}",
-      path_directory_output   = "{path_directory_output}"
-    )
+    template %>%
+    # substr(1,2000) %>%
+    gsub("\\{directory_output\\}", config$directory_output, .) %>%
+    gsub("\\{directory_file_server\\}", config$directory_file_server, .) %>%
+    gsub("\\{project_name\\}", project_name, .) %>%
+    gsub("\\{schema_name\\}", gsub("-", "_", project_name), .)
 
   readr::write_file(value, path_out)
 }
