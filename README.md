@@ -1,38 +1,56 @@
 pluripotent
 =========================
 
-Repeatedly generate an embryonic repository with one command
+Repeatedly generate an embryonic repository with one command.
 
-Like a [pluripotent stem cell](https://en.wikipedia.org/wiki/Stem_cell#Potency_meaning) this package will generate new cells/projects.  These offspring repos are more specialized, and will exist to do real work.  As opposed to exist to generate more stem cells.
+Like a [pluripotent stem cell](https://en.wikipedia.org/wiki/Stem_cell#Potency_meaning), this package will generate new cells/projects.  These offspring repos are more specialized, and will exist to do real work (as opposed to exist to generate more stem cells).
 
-The two projects I immediately want to support are 
+The [inst/metadata/file-to-copy.csv](https://github.com/OuhscBbmc/pluripotent/blob/master/inst/metadata/file-to-copy.csv) file describes the source and destination of transferred files.  The two projects currently natively supported are:
+
 * [RAnalysisSkeleton](https://github.com/wibeasley/RAnalysisSkeleton) which is our all-purpose data science project.
-* [cdw-staging](https://github.com/OuhscBbmc/cdw-staging) which is our non-public repo used to see our analysis projects that use OUHSC's clinical data warehouse.
 
+* [cdw-skeleton-1](https://github.com/OuhscBbmc/cdw-skeleton-1) which is our public repo used to seed our [CDW](https://github.com/OuhscBbmc/prairie-outpost-public) analysis projects.
 
-I hope that a new project/repo called 'patient-health' can be generated in three ways:
-1. a single chunk of code like
+A new project/repo called 'beasley-poc-1' can be generated in two ways:
+
+1. Run this single chunk of code, after updating the `project_name` and `destination_directory` arguments.
+
     ```r
     remotes::install_github(repo="OuhscBbmc/pluripotent")
     pluripotent::start_cdw_skeleton_1(
       project_name            = "beasley-poc-1",
-      destination_directory   = "~/Bbmc/cdw"
+      destination_directory   = "~/bbmc/cdw"
     )
     ```
-    
-1. an RStudio [addin](https://rstudio.github.io/rstudioaddins/), which has been nice for our [OuhscMunge package](http://ouhscbbmc.github.io/OuhscMunge/reference/install_packages_addin.html)
-1. a Gist-base function, like what's [worked well for installing packages](https://github.com/OuhscBbmc/RedcapExamplesAndPatterns/blob/master/DocumentationGlobal/ResourcesInstallation.md#installation-required) in a new system.  Maybe something like
+
+1. The [cdw-template-1](https://github.com/OuhscBbmc/cdw-template-1) repo provides a platform to jump-start consistent repos for CDW projects.  Once it's used as a [GitHub template](https://help.github.com/en/articles/creating-a-repository-from-a-template), the [`utility/spawn.R`](https://github.com/OuhscBbmc/cdw-template-1/blob/master/utility/spawn.R) file contains the following dynamic code that should run without modification.
 
     ```r
-    if( !base::requireNamespace("devtools") ) utils::install.packages("devtools")
-    devtools::source_gist("2c5e7459b88ec28b9e8fa0c695b15ee3", filename="seed.R")
-    seed_skeleton()
+    # Install remotes & pluripotent if not already installed.  pluripotent won't reinstall if it's already up-to-date.
+    if( !requireNamespace("remotes") ) utils::install.packages("remotes")
+    remotes::install_github("OuhscBbmc/pluripotent")
+
+    # Discover repo name & parent directory.
+    project_name          <- basename(normalizePath(".."))
+    project_parent_path   <- normalizePath("..\\..")
+
+    # Copy remote files to the current repo.
+    pluripotent::start_cdw_skeleton_1(
+    project_name          = project_name,
+    destination_directory = project_parent_path
+    )
+
+    # Afterwards, close RStudio and open the *.Rproj file in the root directory.
     ```
+
+<!--
+If you want to use this package for projects that aren't included in [inst/metadata/file-to-copy.csv](https://github.com/OuhscBbmc/pluripotent/blob/master/inst/metadata/file-to-copy.csv) file describes the source and destination of transferred files.
+-->
 
 @andkov, as I'm describing this, I see the resemblance to a [factory pattern](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)) in software.  But the stem cell metaphor is both flowery and abstruse, which seems to be what you and I go for when we're attaching metaphors.
 
-
-### Installation and Documentation
+Installation and Documentation
+--------------------------------------
 
 The *development* version can be installed from [GitHub](https://github.com/OuhscBbmc/pluripotent) after installing the [remotes](https://CRAN.R-project.org/package=remotes) package.
 
@@ -41,11 +59,10 @@ install.packages("pluripotent") # Run this line if the 'remotes' package isn't i
 remotes::install_github(repo="OuhscBbmc/pluripotent")
 ```
 
-
 The package can be uninstalled from your local machine with `remove.packages("pluripotent")`.
 
-
-### Build Status and Package Characteristics
+Build Status and Package Characteristics
+--------------------------------------
 
 | [GitHub](https://github.com/OuhscBbmc/pluripotent) | [Travis-CI](https://travis-ci.org/OuhscBbmc/pluripotent/builds) | [AppVeyor](https://ci.appveyor.com/project/wibeasley/pluripotent/history) | [Coveralls](https://coveralls.io/r/OuhscBbmc/pluripotent) |
 | :----- | :---------------------------: | :-----------------------------: | :-------: |
