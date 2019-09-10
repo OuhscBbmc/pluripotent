@@ -5,13 +5,16 @@ Repeatedly generate an embryonic repository with one command
 
 Like a [pluripotent stem cell](https://en.wikipedia.org/wiki/Stem_cell#Potency_meaning) this package will generate new cells/projects.  These offspring repos are more specialized, and will exist to do real work.  As opposed to exist to generate more stem cells.
 
-The two projects I immediately want to support are 
+The two projects I immediately want to support are
+
 * [RAnalysisSkeleton](https://github.com/wibeasley/RAnalysisSkeleton) which is our all-purpose data science project.
+
 * [cdw-staging](https://github.com/OuhscBbmc/cdw-staging) which is our non-public repo used to see our analysis projects that use OUHSC's clinical data warehouse.
 
-
 I hope that a new project/repo called 'patient-health' can be generated in three ways:
+
 1. a single chunk of code like
+
     ```r
     remotes::install_github(repo="OuhscBbmc/pluripotent")
     pluripotent::start_cdw_skeleton_1(
@@ -19,8 +22,9 @@ I hope that a new project/repo called 'patient-health' can be generated in three
       destination_directory   = "~/Bbmc/cdw"
     )
     ```
-    
+
 1. an RStudio [addin](https://rstudio.github.io/rstudioaddins/), which has been nice for our [OuhscMunge package](http://ouhscbbmc.github.io/OuhscMunge/reference/install_packages_addin.html)
+
 1. a Gist-base function, like what's [worked well for installing packages](https://github.com/OuhscBbmc/RedcapExamplesAndPatterns/blob/master/DocumentationGlobal/ResourcesInstallation.md#installation-required) in a new system.  Maybe something like
 
     ```r
@@ -31,8 +35,8 @@ I hope that a new project/repo called 'patient-health' can be generated in three
 
 @andkov, as I'm describing this, I see the resemblance to a [factory pattern](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)) in software.  But the stem cell metaphor is both flowery and abstruse, which seems to be what you and I go for when we're attaching metaphors.
 
-
-### Installation and Documentation
+Installation and Documentation
+--------------------------------------
 
 The *development* version can be installed from [GitHub](https://github.com/OuhscBbmc/pluripotent) after installing the [remotes](https://CRAN.R-project.org/package=remotes) package.
 
@@ -41,11 +45,10 @@ install.packages("pluripotent") # Run this line if the 'remotes' package isn't i
 remotes::install_github(repo="OuhscBbmc/pluripotent")
 ```
 
-
 The package can be uninstalled from your local machine with `remove.packages("pluripotent")`.
 
-
-### Build Status and Package Characteristics
+Build Status and Package Characteristics
+--------------------------------------
 
 | [GitHub](https://github.com/OuhscBbmc/pluripotent) | [Travis-CI](https://travis-ci.org/OuhscBbmc/pluripotent/builds) | [AppVeyor](https://ci.appveyor.com/project/wibeasley/pluripotent/history) | [Coveralls](https://coveralls.io/r/OuhscBbmc/pluripotent) |
 | :----- | :---------------------------: | :-----------------------------: | :-------: |
