@@ -12,6 +12,9 @@ path_out_expected <- system.file("tests/config-out-expected.yml", package = "plu
 path_out_actual   <- "testing/config-out-expected.yml"
 
 test_that("Smoke Test -populate_config", {
+  if( !dir.exists(dirname(path_out_actual)) )
+    dir.create(dirname(path_out_actual))
+
   populate_config(
     path_in        = path_in,
     project_name   = "thumann-awesomeness-1",
@@ -19,6 +22,9 @@ test_that("Smoke Test -populate_config", {
   )
 })
 test_that("compare -populate_config", {
+  if( !dir.exists(dirname(path_out_actual)) )
+    dir.create(dirname(path_out_actual))
+
   populate_config(
     path_in        = path_in,
     project_name   = "thumann-awesomeness-1",

@@ -21,7 +21,7 @@ test_that("Retrieve cdw-skeleton", {
     "cdw-skeleton-1",
     destination_directory = destination
   )
-  expect_equal(nrow(d), 57L)
+  expect_equal(nrow(d), 58L)
 })
 
 test_that("Download", {
@@ -32,7 +32,7 @@ test_that("Download", {
   )
 
   file_count <- length(list.files(destination, all.files = T, recursive = T))
-  expect_equal(file_count, 47L)
+  expect_equal(file_count, 48L)
 
   unlink(destination, recursive = TRUE)
 })

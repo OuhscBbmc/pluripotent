@@ -8,7 +8,7 @@ test_that("start_r_analysis_skeleton", {
   )
 
   file_count <- length(list.files(destination, all.files = T, recursive = T))
-  expect_equal(file_count, 49L)
+  expect_equal(file_count, 47L)
 
   unlink(destination, recursive = TRUE)
 })

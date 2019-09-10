@@ -11,6 +11,7 @@ README.html$
 documentation-peek.pdf
 documentation-for-developers/
 playgrounds/
+sandbox/
 utility/
 ^\.travis\.yml$
 ^appveyor\.yml$
