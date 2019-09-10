@@ -35,10 +35,10 @@ config$directory_output
 value <-
   template %>%
   # substr(1,2000) %>%
-  gsub("\\{directory_output\\}", config$directory_output, .) %>%
-  gsub("\\{directory_file_server\\}", config$directory_file_server, .) %>%
-  gsub("\\{project_name\\}", project_name, .) %>%
-  gsub("\\{schema_name\\}", gsub("-", "_", project_name), .) #%>%
+  gsub(pattern = "\\{directory_output\\}"     , replacement = config$directory_output     , x = rlang::.data) %>%
+  gsub(pattern = "\\{directory_file_server\\}", replacement = config$directory_file_server, x = rlang::.data) %>%
+  gsub(pattern = "\\{project_name\\}"         , replacement = project_name                , x = rlang::.data) %>%
+  gsub(pattern = "\\{schema_name\\}"          , replacement = gsub("-", "_", project_name), x = rlang::.data) #%>%
   # cat()
 
 # %>%

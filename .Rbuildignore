@@ -12,6 +12,7 @@ documentation-peek.pdf
 documentation-for-developers/
 playgrounds/
 sandbox/
+testing/
 utility/
 ^\.travis\.yml$
 ^appveyor\.yml$

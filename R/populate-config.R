@@ -36,10 +36,10 @@ populate_config <- function( path_in, project_name, path_out = path_in ) {
 
   value <-
     template %>%
-    gsub("\\{directory_output\\}", config$directory_output, .) %>%
-    gsub("\\{directory_file_server\\}", config$directory_file_server, .) %>%
-    gsub("\\{project_name\\}", project_name, .) %>%
-    gsub("\\{schema_name\\}", gsub("-", "_", project_name), .)
+    gsub(pattern = "\\{directory_output\\}"     , replacement = config$directory_output     , x = .) %>%
+    gsub(pattern = "\\{directory_file_server\\}", replacement = config$directory_file_server, x = .) %>%
+    gsub(pattern = "\\{project_name\\}"         , replacement = project_name                , x = .) %>%
+    gsub(pattern = "\\{schema_name\\}"          , replacement = gsub("-", "_", project_name), x = .) #%>%
 
   readr::write_file(value, path_out)
 }
