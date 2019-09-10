@@ -4,7 +4,7 @@
 \alias{start_project}
 \alias{start_r_analysis_skeleton}
 \alias{start_cdw_skeleton_1}
-\title{Start specific projects project}
+\title{Start specific projects}
 \usage{
 start_r_analysis_skeleton(
   project_name  = "new-project-analysis",

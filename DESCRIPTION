@@ -23,7 +23,9 @@ Depends:
     R (>= 3.0.0),
     stats
 Imports:
+    config,
     dplyr,
+    glue,
     httr (>= 1.3.0),
     magrittr,
     purrr,
