@@ -43,6 +43,19 @@ A new project/repo called 'beasley-poc-1' can be generated in two ways:
     # Afterwards, close RStudio and open the *.Rproj file in the root directory.
     ```
 
+
+    To spawn a cdw repo (*i.e.*, a repo whose template is [cdw-template-1](https://github.com/OuhscBbmc/cdw-template-1)):
+    
+    1. open `utility/spawn.R` directly in RStudio & run the whole file (*i.e.*, ctrl+shift+r)
+    1. after it completes, close RStudio
+    1. commit & push the repo.  A typical commit message is
+        > populate repo files
+        >
+        > closes #1 *(or whatever issue number corresponds to 'initialize repo')*
+    1. go up one directory (to the repo root) and open the *.Rproj file.
+    1. Do Science :1st_place_medal: 
+    
+    
 <!--
 If you want to use this package for projects that aren't included in [inst/metadata/file-to-copy.csv](https://github.com/OuhscBbmc/pluripotent/blob/master/inst/metadata/file-to-copy.csv) file describes the source and destination of transferred files.
 -->
