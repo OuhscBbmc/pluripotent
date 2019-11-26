@@ -55,6 +55,12 @@ A new project/repo called 'beasley-poc-1' can be generated in two ways:
     1. go up one directory (to the repo root) and open the *.Rproj file.
     1. Do Science :1st_place_medal: 
     
+1. To update a config file that's downloaded from [the skeleton's config file](https://github.com/OuhscBbmc/cdw-skeleton-1/blob/master/config.yml), run this instead of spawning a new repo.  This scenario comes up when refitting older repos to newer standards.
+    
+    ```r
+    pluripotent::populate_config("config.yml", basename(getwd())
+    ```
+    
     
 <!--
 If you want to use this package for projects that aren't included in [inst/metadata/file-to-copy.csv](https://github.com/OuhscBbmc/pluripotent/blob/master/inst/metadata/file-to-copy.csv) file describes the source and destination of transferred files.
