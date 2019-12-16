@@ -26,7 +26,9 @@ r-analysis-skeleton,analysis/README.md,TRUE,https://raw.githubusercontent.com/wi
 r-analysis-skeleton,analysis/report-te-1/report-te-1.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/analysis/report-te-1/report-te-1.R
 r-analysis-skeleton,analysis/report-te-1/report-te-1.Rmd,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/analysis/report-te-1/report-te-1.Rmd
 r-analysis-skeleton,data-public/derived/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/derived/README.md
+r-analysis-skeleton,data-public/metadata/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/metadata/README.md
 r-analysis-skeleton,data-public/metadata/cqi-annotation.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/metadata/cqi-annotation.csv
+r-analysis-skeleton,data-public/metadata/ss-county.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/metadata/ss-county.csv
 r-analysis-skeleton,data-public/raw/mlm-1.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/raw/mlm-1.csv
 r-analysis-skeleton,data-public/raw/mtcar.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/raw/mtcar.csv
 r-analysis-skeleton,data-public/raw/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/raw/README.md
@@ -55,6 +57,9 @@ cdw-skeleton-1,data-public/derived/README.md,TRUE,https://raw.githubusercontent.
 cdw-skeleton-1,data-public/metadata/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/metadata/README.md
 cdw-skeleton-1,data-public/raw/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/raw/README.md
 cdw-skeleton-1,data-public/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/README.md
+cdw-skeleton-1,data-public/metadata/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/metadata/README.md
+cdw-skeleton-1,data-public/metadata/cqi-annotation.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/metadata/cqi-annotation.csv
+cdw-skeleton-1,data-public/metadata/ss-county.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/metadata/ss-county.csv
 cdw-skeleton-1,data-unshared/contents.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-unshared/contents.md
 cdw-skeleton-1,data-unshared/derived/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-unshared/derived/README.md
 cdw-skeleton-1,data-unshared/raw/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-unshared/raw/README.md

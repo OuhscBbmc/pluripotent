@@ -19,7 +19,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Will Beasley \email{wibeasley@hotmail.com} (0000-0002-5613-5006)
+\strong{Maintainer}: Will Beasley \email{wibeasley@hotmail.com} (\href{https://orcid.org/0000-0002-5613-5006}{ORCID})
 
 Other contributors:
 \itemize{
