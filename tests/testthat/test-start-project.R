@@ -8,7 +8,7 @@ test_that("start_r_analysis_skeleton", {
   )
 
   file_count <- length(list.files(destination, all.files = T, recursive = T))
-  expect_equal(file_count, 47L)
+  expect_gt(file_count, 45L)
 
   unlink(destination, recursive = TRUE)
 })
@@ -25,7 +25,7 @@ test_that("start_cdw_skeleton", {
   )
 
   file_count <- length(list.files(destination, all.files = T, recursive = T))
-  expect_equal(file_count, 42L)
+  expect_gt(file_count, 40L)
 
   # There are really 57 files, but 16 go to the S drive,
   #   and I don't know how to capture & test that.

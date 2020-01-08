@@ -30,7 +30,7 @@
 
 #' @export
 populate_config <- function( path_in, project_name, path_out = path_in ) {
-
+  . <- NULL
   template  <- readr::read_file(path_in)
   config    <- config::get(file=path_in)
 

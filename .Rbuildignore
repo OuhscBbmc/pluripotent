@@ -2,6 +2,7 @@
 ^\.Rproj\.user$
 ^\.gitignore$
 ^\.travis.yml$
+^\.vscode/
 ^cran-comments\.md$
 ^CRAN-RELEASE$
 ^CODE_OF_CONDUCT\.md$
@@ -22,4 +23,3 @@ utility/
 ^CONDUCT\.md$
 ^.*\.o$
 ^_pkgdown\.yml$
-
