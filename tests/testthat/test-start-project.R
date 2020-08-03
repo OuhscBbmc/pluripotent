@@ -1,5 +1,4 @@
 library(testthat)
-context("Start Project")
 
 test_that("start_r_analysis_skeleton", {
   destination <- "./testing"
@@ -25,7 +24,7 @@ test_that("start_cdw_skeleton", {
   )
 
   file_count <- length(list.files(destination, all.files = T, recursive = T))
-  expect_gt(file_count, 40L)
+  expect_gt(file_count, 22L)
 
   # There are really 57 files, but 16 go to the S drive,
   #   and I don't know how to capture & test that.

@@ -36,7 +36,7 @@ on your local maachine.
 Currently, two types of project is supported:
 \enumerate{
 \item r-analysis-skeleton
-\item cdw-sekeleton-1
+\item cdw-skeleton-1
 }
 }
 \note{
@@ -45,6 +45,7 @@ refer to https://github.com/OuhscBbmc/pluripotent/inst/data/file-to-copy.csv.
 Each line represents one file that will be placed in the new project.  The columns are
 \enumerate{
 \item \code{offspring}: the project type to be created.
+\item \code{copy}: indicator if the file should be copied.  If \code{FALSE}, the file is ignored.
 \item \code{destination}: the file's location in the new project.
 \item \code{source}: the location where the file is copied from.
 }

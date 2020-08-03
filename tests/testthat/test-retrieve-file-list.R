@@ -1,6 +1,4 @@
 library(testthat)
-context("retrieve file list")
-
 
 test_that("Smoke Test -Retrieve", {
   d <- retrieve_file_list("r-analysis-skeleton")
@@ -21,7 +19,7 @@ test_that("Retrieve cdw-skeleton", {
     "cdw-skeleton-1",
     destination_directory = destination
   )
-  expect_gt(nrow(d), 50L)
+  expect_gt(nrow(d), 23L)
 })
 
 test_that("Download", {

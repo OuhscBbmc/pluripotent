@@ -30,13 +30,14 @@
 #' @details
 #' Currently, two types of project is supported:
 #' 1. r-analysis-skeleton
-#' 1. cdw-sekeleton-1
+#' 1. cdw-skeleton-1
 #'
 #' @note
 #' To view the files involved in each project type,
 #' refer to https://github.com/OuhscBbmc/pluripotent/inst/data/file-to-copy.csv.
 #' Each line represents one file that will be placed in the new project.  The columns are
 #' 1. `offspring`: the project type to be created.
+#' 1. `copy`: indicator if the file should be copied.  If `FALSE`, the file is ignored.
 #' 1. `destination`: the file's location in the new project.
 #' 1. `source`: the location where the file is copied from.
 #'
@@ -82,6 +83,7 @@ download_file_list <- function(
   # utils::download.file(d$source, d$destination)
 }
 
+#' @importFrom rlang .data
 #' @export
 retrieve_file_list <- function(
   offspring,
@@ -98,12 +100,14 @@ retrieve_file_list <- function(
 
   col_types <- readr::cols_only(
     offspring               = readr::col_character(),
+    copy                    = readr::col_logical(),
     destination_template    = readr::col_character(),
     destination_relative    = readr::col_logical(),
     source                  = readr::col_character()
   )
   d <- system.file("metadata", "file-to-copy.csv", package = "pluripotent", mustWork = TRUE) %>%
-    readr::read_csv(col_types=col_types)
+    readr::read_csv(col_types=col_types) %>%
+    dplyr::filter(.data$copy)
 
   checkmate::assert_tibble(
     d,
