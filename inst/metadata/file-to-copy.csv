@@ -72,6 +72,8 @@ cdw-skeleton-1,TRUE,manipulation/README.md,TRUE,https://raw.githubusercontent.co
 cdw-skeleton-1,TRUE,manipulation/csv-report-generator.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/manipulation/csv-report-generator.R
 cdw-skeleton-1,TRUE,manipulation/scribe-factory.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/manipulation/scribe-factory.R
 cdw-skeleton-1,TRUE,manipulation/ss-county-ellis.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/ss-county-ellis.R
+cdw-skeleton-1,TRUE,S:/BBMC/prairie-outpost/{project-name}/data-public/README.md,FALSE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/file-server/data-public/README.md
+cdw-skeleton-1,TRUE,S:/BBMC/prairie-outpost/{project-name}/data-private/README.md,FALSE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/file-server/data-private/README.md
 cdw-skeleton-1,FALSE,manipulation/sweep-and-specify/get-sweep-and-specify.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/manipulation/sweep-and-specify/get-sweep-and-specify.R
 cdw-skeleton-1,FALSE,manipulation/sweep-and-specify/post-sweep-and-specify.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/manipulation/sweep-and-specify/post-sweep-and-specify.R
 cdw-skeleton-1,FALSE,manipulation/sweep-and-specify/sql/review-required-centricity-diagnosis.sql,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/manipulation/sweep-and-specify/sql/review-required-centricity-diagnosis.sql
