@@ -2,8 +2,10 @@ offspring,copy,destination_template,destination_relative,source
 r-analysis-skeleton,TRUE,.gitignore,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.gitignore
 r-analysis-skeleton,TRUE,{project-name}.Rproj,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/RAnalysisSkeleton.Rproj
 r-analysis-skeleton,TRUE,.gitattributes,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.gitattributes
+r-analysis-skeleton,TRUE,.markdownlint.json,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.markdownlint.json
 r-analysis-skeleton,TRUE,config.yml,TRUE,https://raw.githubusercontent.com/wibeasley/RanalysisSkeleton/master/config.yml
 r-analysis-skeleton,TRUE,flow.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/flow.R
+r-analysis-skeleton,TRUE,.vscode/settings.json,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.vscode/settings.json
 r-analysis-skeleton,TRUE,manipulation/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/README.md
 r-analysis-skeleton,TRUE,manipulation/car-ellis.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/car-ellis.R
 r-analysis-skeleton,TRUE,manipulation/mlm-ellis-1.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/manipulation/mlm-1-ellis.R
@@ -51,8 +53,10 @@ r-analysis-skeleton,TRUE,utility/README.md,TRUE,https://raw.githubusercontent.co
 cdw-skeleton-1,TRUE,{project-name}.Rproj,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/RAnalysisSkeleton.Rproj
 cdw-skeleton-1,TRUE,.gitattributes,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.gitattributes
 cdw-skeleton-1,TRUE,.gitignore,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.gitignore
+cdw-skeleton-1,TRUE,.markdownlint.json,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.markdownlint.json
 cdw-skeleton-1,TRUE,config.yml,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/config.yml
 cdw-skeleton-1,TRUE,flow.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/flow.R
+cdw-skeleton-1,TRUE,.vscode/settings.json,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/.vscode/settings.json
 cdw-skeleton-1,TRUE,analysis/inspection/inspection.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/master/analysis/inspection/inspection.R
 cdw-skeleton-1,TRUE,analysis/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/analysis/README.md
 cdw-skeleton-1,TRUE,data-public/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/master/data-public/README.md
