@@ -6,19 +6,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Generate an embryonic repository • pluripotent</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
+<script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="Generate an embryonic repository">
 <meta property="og:description" content="Repeatedly generate an embryonic repository with
     one command.">
-<meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,26 +34,20 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">pluripotent</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1.9003</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.2</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fa fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="reference/index.html">Reference</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/OuhscBbmc/pluripotent">
-    <span class="fa fa-github fa-lg"></span>
+  <a href="https://github.com/OuhscBbmc/pluripotent/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -63,67 +60,104 @@
 <!--/.navbar -->
 
       
+
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="pluripotent" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#pluripotent" class="anchor"></a>pluripotent</h1></div>
-<p>Repeatedly generate an embryonic repository with one command</p>
-<p>Like a <a href="https://en.wikipedia.org/wiki/Stem_cell#Potency_meaning">pluripotent stem cell</a> this package will generate new cells/projects. These offspring repos are more specialized, and will exist to do real work. As opposed to exist to generate more stem cells.</p>
-<p>The two projects I immediately want to support are</p>
+<div class="section level1">
+<div class="page-header"><h1 id="pluripotent">pluripotent<a class="anchor" aria-label="anchor" href="#pluripotent"></a>
+</h1></div>
+<p>Repeatedly generate an embryonic repository with one command.</p>
+<p>Like a <a href="https://en.wikipedia.org/wiki/Stem_cell#Potency_meaning" class="external-link">pluripotent stem cell</a>, this package will generate new cells/projects. These offspring repos are more specialized, and will exist to do real work (as opposed to exist to generate more stem cells).</p>
+<p>The <a href="https://github.com/OuhscBbmc/pluripotent/blob/main/inst/metadata/file-to-copy.csv" class="external-link">inst/metadata/file-to-copy.csv</a> file describes the source and destination of transferred files. The two projects currently natively supported are:</p>
 <ul>
-<li>
-<a href="https://github.com/wibeasley/RAnalysisSkeleton">RAnalysisSkeleton</a> which is our all-purpose data science project.</li>
-<li>
-<a href="https://github.com/OuhscBbmc/cdw-staging">cdw-staging</a> which is our non-public repo used to see our analysis projects that use OUHSC’s clinical data warehouse.</li>
+<li><p><a href="https://github.com/wibeasley/RAnalysisSkeleton" class="external-link">RAnalysisSkeleton</a> which is our all-purpose data science project.</p></li>
+<li><p><a href="https://github.com/OuhscBbmc/cdw-skeleton-1" class="external-link">cdw-skeleton-1</a> which is our public repo used to seed our <a href="https://github.com/OuhscBbmc/prairie-outpost-public" class="external-link">CDW</a> analysis projects.</p></li>
 </ul>
-<p>I hope that a new project/repo called ‘patient-health-1’ can be generated in three ways:</p>
-<ol>
+<p>A new project/repo called ‘beasley-poc-1’ can be generated in two ways:</p>
+<ol style="list-style-type: decimal">
 <li>
-<p>a single line of code like</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># remotes::install_github("OuhscBbmc/pluripotent")</span></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">pluripotent<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/pluripotent/topics/start_project">start_cdw_skeleton_1</a></span>(<span class="st">"patient-health-1"</span>, <span class="st">"~/bbmc/cdw"</span>)</a></code></pre></div>
-</li>
-<li>an RStudio <a href="https://rstudio.github.io/rstudioaddins/">addin</a>, which has been nice for our <a href="http://ouhscbbmc.github.io/OuhscMunge/reference/install_packages_addin.html">OuhscMunge package</a>
+<p>Run this single chunk of code, after updating the <code>project_name</code> and <code>destination_directory</code> arguments.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span>repo<span class="op">=</span><span class="st">"OuhscBbmc/pluripotent"</span><span class="op">)</span></span>
+<span><span class="fu">pluripotent</span><span class="fu">::</span><span class="fu"><a href="reference/start_project.html">start_cdw_skeleton_1</a></span><span class="op">(</span></span>
+<span>  project_name            <span class="op">=</span> <span class="st">"beasley-poc-1"</span>,</span>
+<span>  destination_directory   <span class="op">=</span> <span class="st">"~/bbmc/cdw"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </li>
 <li>
-<p>a Gist-base function, like what’s <a href="https://github.com/OuhscBbmc/RedcapExamplesAndPatterns/blob/master/DocumentationGlobal/ResourcesInstallation.md#installation-required">worked well for installing packages</a> in a new system. Maybe something like</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="cf">if</span>( <span class="op">!</span>base<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"devtools"</span>) ) utils<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"devtools"</span>)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/source_gist">source_gist</a></span>(<span class="st">"2c5e7459b88ec28b9e8fa0c695b15ee3"</span>, <span class="dt">filename=</span><span class="st">"seed.R"</span>)</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw">seed_skeleton</span>()</a></code></pre></div>
+<p>The <a href="https://github.com/OuhscBbmc/cdw-template-1" class="external-link">cdw-template-1</a> repo provides a platform to jump-start consistent repos for CDW projects. Once it’s used as a <a href="https://help.github.com/en/articles/creating-a-repository-from-a-template" class="external-link">GitHub template</a>, the <a href="https://github.com/OuhscBbmc/cdw-template-1/blob/main/utility/spawn.R" class="external-link"><code>utility/spawn.R</code></a> file contains the following dynamic code that should run without modification.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Install remotes &amp; pluripotent if not already installed.  pluripotent won't reinstall if it's already up-to-date.</span></span>
+<span><span class="kw">if</span><span class="op">(</span> <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span> <span class="op">)</span> <span class="fu">utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"OuhscBbmc/pluripotent"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Discover repo name &amp; parent directory.</span></span>
+<span><span class="va">project_name</span>          <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/basename.html" class="external-link">basename</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/normalizePath.html" class="external-link">normalizePath</a></span><span class="op">(</span><span class="st">".."</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">project_parent_path</span>   <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/normalizePath.html" class="external-link">normalizePath</a></span><span class="op">(</span><span class="st">"..\\.."</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Copy remote files to the current repo.</span></span>
+<span><span class="fu">pluripotent</span><span class="fu">::</span><span class="fu"><a href="reference/start_project.html">start_cdw_skeleton_1</a></span><span class="op">(</span></span>
+<span>project_name          <span class="op">=</span> <span class="va">project_name</span>,</span>
+<span>destination_directory <span class="op">=</span> <span class="va">project_parent_path</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Afterwards, close RStudio and open the *.Rproj file in the root directory.</span></span></code></pre></div>
+<p>To spawn a cdw repo (<em>i.e.</em>, a repo whose template is <a href="https://github.com/OuhscBbmc/cdw-template-1" class="external-link">cdw-template-1</a>):</p>
+<ol style="list-style-type: decimal">
+<li>open <code>utility/spawn.R</code> directly in RStudio &amp; run the whole file (<em>i.e.</em>, ctrl+shift+r)</li>
+<li>after it completes, close RStudio</li>
+<li>commit &amp; push the repo. A typical commit message is &gt; populate repo files &gt; &gt; closes #1 <em>(or whatever issue number corresponds to ‘initialize repo’)</em>
+</li>
+<li>go up one directory (to the repo root) and open the *.Rproj file.</li>
+<li>Do Science <span class="emoji" data-emoji="1st_place_medal">🥇</span>
 </li>
 </ol>
-<p>@andkov, as I’m describing this, I see the resemblance to a <a href="https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)">factory pattern</a> in software. But the stem cell metaphor is both flowery and abstruse, which seems to be what you and I go for when we’re attaching metaphors.</p>
-<div id="installation-and-documentation" class="section level3">
-<h3 class="hasAnchor">
-<a href="#installation-and-documentation" class="anchor"></a>Installation and Documentation</h3>
-<p>The <em>development</em> version can be installed from <a href="https://github.com/OuhscBbmc/pluripotent">GitHub</a> after installing the <a href="https://CRAN.R-project.org/package=remotes">remotes</a> package.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"pluripotent"</span>) <span class="co"># Run this line if the 'remotes' package isn't installed already.</span></a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="dt">repo=</span><span class="st">"OuhscBbmc/pluripotent"</span>)</a></code></pre></div>
-<p>The package can be uninstalled from your local machine with <code><a href="https://www.rdocumentation.org/packages/utils/topics/remove.packages">remove.packages("pluripotent")</a></code>.</p>
+</li>
+<li>
+<p>To update a config file that’s downloaded from <a href="https://github.com/OuhscBbmc/cdw-skeleton-1/blob/main/config.yml" class="external-link">the skeleton’s config file</a>, run this instead of spawning a new repo. This scenario comes up when refitting older repos to newer standards.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pluripotent<span class="sc">::</span><span class="fu">populate_config</span>(<span class="st">"config.yml"</span>, <span class="fu">basename</span>(<span class="fu">getwd</span>())</span></code></pre></div>
+</li>
+</ol>
+<!--
+If you want to use this package for projects that aren't included in [inst/metadata/file-to-copy.csv](https://github.com/OuhscBbmc/pluripotent/blob/main/inst/metadata/file-to-copy.csv) file describes the source and destination of transferred files.
+--><p>@andkov, as I’m describing this, I see the resemblance to a <a href="https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)" class="external-link">factory pattern</a> in software. But the stem cell metaphor is both flowery and abstruse, which seems to be what you and I go for when we’re attaching metaphors.</p>
+<div class="section level2">
+<h2 id="installation-and-documentation">Installation and Documentation<a class="anchor" aria-label="anchor" href="#installation-and-documentation"></a>
+</h2>
+<p>The <em>development</em> version can be installed from <a href="https://github.com/OuhscBbmc/pluripotent" class="external-link">GitHub</a> after installing the <a href="https://CRAN.R-project.org/package=remotes" class="external-link">remotes</a> package.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"pluripotent"</span><span class="op">)</span> <span class="co"># Run this line if the 'remotes' package isn't installed already.</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span>repo<span class="op">=</span><span class="st">"OuhscBbmc/pluripotent"</span><span class="op">)</span></span></code></pre></div>
+<p>The package can be uninstalled from your local machine with <code>remove.packages("pluripotent")</code>.</p>
 </div>
-<div id="build-status-and-package-characteristics" class="section level3">
-<h3 class="hasAnchor">
-<a href="#build-status-and-package-characteristics" class="anchor"></a>Build Status and Package Characteristics</h3>
+<div class="section level2">
+<h2 id="build-status-and-package-characteristics">Build Status and Package Characteristics<a class="anchor" aria-label="anchor" href="#build-status-and-package-characteristics"></a>
+</h2>
 <table class="table">
+<colgroup>
+<col width="8%">
+<col width="38%">
+<col width="41%">
+<col width="12%">
+</colgroup>
 <thead><tr class="header">
-<th align="left"><a href="https://github.com/OuhscBbmc/pluripotent">GitHub</a></th>
-<th align="center"><a href="https://travis-ci.org/OuhscBbmc/pluripotent/builds">Travis-CI</a></th>
-<th align="center"><a href="https://ci.appveyor.com/project/wibeasley/pluripotent/history">AppVeyor</a></th>
-<th align="center"><a href="https://coveralls.io/r/OuhscBbmc/pluripotent">Coveralls</a></th>
+<th align="left"><a href="https://github.com/OuhscBbmc/pluripotent" class="external-link">GitHub</a></th>
+<th align="center"><a href="https://travis-ci.org/OuhscBbmc/pluripotent/builds" class="external-link">Travis-CI</a></th>
+<th align="center"><a href="https://ci.appveyor.com/project/wibeasley/pluripotent/history" class="external-link">AppVeyor</a></th>
+<th align="center"><a href="https://coveralls.io/r/OuhscBbmc/pluripotent" class="external-link">Coveralls</a></th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OuhscBbmc/pluripotent/tree/master">Master</a></td>
-<td align="center"><a href="https://travis-ci.org/OuhscBbmc/pluripotent"><img src="https://travis-ci.org/OuhscBbmc/pluripotent.svg?branch=master" alt="Build Status"></a></td>
-<td align="center"><a href="https://ci.appveyor.com/project/wibeasley/pluripotent/branch/master"><img src="https://ci.appveyor.com/api/projects/status/ie2hgogtuqom092k/branch/master?svg=true" alt="Build status"></a></td>
-<td align="center"><a href="https://coveralls.io/github/OuhscBbmc/pluripotent?branch=master"><img src="https://coveralls.io/repos/github/OuhscBbmc/pluripotent/badge.svg?branch=master" alt="Coverage Status"></a></td>
+<td align="left"><a href="https://github.com/OuhscBbmc/pluripotent/tree/main" class="external-link">Main</a></td>
+<td align="center"><a href="https://travis-ci.org/OuhscBbmc/pluripotent" class="external-link"><img src="https://travis-ci.org/OuhscBbmc/pluripotent.svg?branch=main" alt="Build Status"></a></td>
+<td align="center"><a href="https://ci.appveyor.com/project/wibeasley/pluripotent/branch/main" class="external-link"><img src="https://ci.appveyor.com/api/projects/status/ie2hgogtuqom092k/branch/main?svg=true" alt="Build status"></a></td>
+<td align="center"><a href="https://coveralls.io/github/OuhscBbmc/pluripotent?branch=main" class="external-link"><img src="https://coveralls.io/repos/github/OuhscBbmc/pluripotent/badge.svg?branch=main" alt="Coverage Status"></a></td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OuhscBbmc/pluripotent/tree/dev">Dev</a></td>
-<td align="center"><a href="https://travis-ci.org/OuhscBbmc/pluripotent"><img src="https://travis-ci.org/OuhscBbmc/pluripotent.svg?branch=dev" alt="Build Status"></a></td>
-<td align="center"><a href="https://ci.appveyor.com/project/wibeasley/pluripotent/branch/dev"><img src="https://ci.appveyor.com/api/projects/status/ie2hgogtuqom092k/branch/dev?svg=true" alt="Build status"></a></td>
-<td align="center"><a href="https://coveralls.io/github/OuhscBbmc/pluripotent?branch=dev"><img src="https://coveralls.io/repos/github/OuhscBbmc/pluripotent/badge.svg?branch=dev" alt="Coverage Status"></a></td>
+<td align="left"><a href="https://github.com/OuhscBbmc/pluripotent/tree/dev" class="external-link">Dev</a></td>
+<td align="center"><a href="https://travis-ci.org/OuhscBbmc/pluripotent" class="external-link"><img src="https://travis-ci.org/OuhscBbmc/pluripotent.svg?branch=dev" alt="Build Status"></a></td>
+<td align="center"><a href="https://ci.appveyor.com/project/wibeasley/pluripotent/branch/dev" class="external-link"><img src="https://ci.appveyor.com/api/projects/status/ie2hgogtuqom092k/branch/dev?svg=true" alt="Build status"></a></td>
+<td align="center"><a href="https://coveralls.io/github/OuhscBbmc/pluripotent?branch=dev" class="external-link"><img src="https://coveralls.io/repos/github/OuhscBbmc/pluripotent/badge.svg?branch=dev" alt="Coverage Status"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"></td>
@@ -134,13 +168,17 @@
 </tbody>
 </table>
 <table class="table">
+<colgroup>
+<col width="40%">
+<col width="60%">
+</colgroup>
 <thead><tr class="header">
 <th align="left">Key</th>
 <th align="left">Value</th>
 </tr></thead>
 <tbody><tr class="odd">
-<td align="left"><a href="https://choosealicense.com/">License</a></td>
-<td align="left"><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a></td>
+<td align="left"><a href="https://choosealicense.com/" class="external-link">License</a></td>
+<td align="left"><a href="https://opensource.org/licenses/MIT" class="external-link"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a></td>
 </tr></tbody>
 </table>
 <!--| [Development Doc](https://www.rdocumentation.org/) | [![Rdoc](https://img.shields.io/badge/pkgodwn-GitHub.io-orange.svg?longCache=true&style=style=for-the-badge)](https://ouhscbbmc.github.io/pluripotent/) |--><!--| [Zenodo Archive](https://zenodo.org/search?ln=en&p=pluripotent) | [![DOI](https://zenodo.org/badge/146359325.svg)](https://zenodo.org/badge/latestdoi/146359325) |--><!--| [CRAN Version](https://cran.r-project.org/package=pluripotent) | [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/pluripotent)](https://cran.r-project.org/package=pluripotent) |
@@ -151,44 +189,60 @@
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/OuhscBbmc/pluripotent">https://​github.com/​OuhscBbmc/​pluripotent</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/OuhscBbmc/pluripotent/issues">https://​github.com/​OuhscBbmc/​pluripotent/​issues</a>
-</li>
+<li><a href="https://github.com/OuhscBbmc/pluripotent/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/OuhscBbmc/pluripotent/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li>
-<a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
-</li>
+<li><a href="LICENSE.html">Full license</a></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing pluripotent</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Will Beasley <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-5613-5006" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID" height="16"></a> </li>
-<li><a href="authors.html">All authors...</a></li>
+<li>Will Beasley <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-5613-5006" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
+
+
 
   </div>
 </div>
 
+
       <footer><div class="copyright">
-  <p>Developed by Will Beasley.</p>
+  <p></p>
+<p>Developed by Will Beasley.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
+
       </footer>
 </div>
+
+  
+
 
   
 
