@@ -5,7 +5,7 @@ Repeatedly generate an embryonic repository with one command.
 
 Like a [pluripotent stem cell](https://en.wikipedia.org/wiki/Stem_cell#Potency_meaning), this package will generate new cells/projects.  These offspring repos are more specialized, and will exist to do real work (as opposed to exist to generate more stem cells).
 
-The [inst/metadata/file-to-copy.csv](https://github.com/OuhscBbmc/pluripotent/blob/master/inst/metadata/file-to-copy.csv) file describes the source and destination of transferred files.  The two projects currently natively supported are:
+The [inst/metadata/file-to-copy.csv](https://github.com/OuhscBbmc/pluripotent/blob/main/inst/metadata/file-to-copy.csv) file describes the source and destination of transferred files.  The two projects currently natively supported are:
 
 * [RAnalysisSkeleton](https://github.com/wibeasley/RAnalysisSkeleton) which is our all-purpose data science project.
 
@@ -23,7 +23,7 @@ A new project/repo called 'beasley-poc-1' can be generated in two ways:
     )
     ```
 
-1. The [cdw-template-1](https://github.com/OuhscBbmc/cdw-template-1) repo provides a platform to jump-start consistent repos for CDW projects.  Once it's used as a [GitHub template](https://help.github.com/en/articles/creating-a-repository-from-a-template), the [`utility/spawn.R`](https://github.com/OuhscBbmc/cdw-template-1/blob/master/utility/spawn.R) file contains the following dynamic code that should run without modification.
+1. The [cdw-template-1](https://github.com/OuhscBbmc/cdw-template-1) repo provides a platform to jump-start consistent repos for CDW projects.  Once it's used as a [GitHub template](https://help.github.com/en/articles/creating-a-repository-from-a-template), the [`utility/spawn.R`](https://github.com/OuhscBbmc/cdw-template-1/blob/main/utility/spawn.R) file contains the following dynamic code that should run without modification.
 
     ```r
     # Install remotes & pluripotent if not already installed.  pluripotent won't reinstall if it's already up-to-date.
@@ -55,7 +55,7 @@ A new project/repo called 'beasley-poc-1' can be generated in two ways:
     1. go up one directory (to the repo root) and open the *.Rproj file.
     1. Do Science :1st_place_medal: 
     
-1. To update a config file that's downloaded from [the skeleton's config file](https://github.com/OuhscBbmc/cdw-skeleton-1/blob/master/config.yml), run this instead of spawning a new repo.  This scenario comes up when refitting older repos to newer standards.
+1. To update a config file that's downloaded from [the skeleton's config file](https://github.com/OuhscBbmc/cdw-skeleton-1/blob/main/config.yml), run this instead of spawning a new repo.  This scenario comes up when refitting older repos to newer standards.
     
     ```r
     pluripotent::populate_config("config.yml", basename(getwd())
@@ -63,7 +63,7 @@ A new project/repo called 'beasley-poc-1' can be generated in two ways:
     
     
 <!--
-If you want to use this package for projects that aren't included in [inst/metadata/file-to-copy.csv](https://github.com/OuhscBbmc/pluripotent/blob/master/inst/metadata/file-to-copy.csv) file describes the source and destination of transferred files.
+If you want to use this package for projects that aren't included in [inst/metadata/file-to-copy.csv](https://github.com/OuhscBbmc/pluripotent/blob/main/inst/metadata/file-to-copy.csv) file describes the source and destination of transferred files.
 -->
 
 @andkov, as I'm describing this, I see the resemblance to a [factory pattern](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)) in software.  But the stem cell metaphor is both flowery and abstruse, which seems to be what you and I go for when we're attaching metaphors.
@@ -85,7 +85,7 @@ Build Status and Package Characteristics
 
 | [GitHub](https://github.com/OuhscBbmc/pluripotent) | [Travis-CI](https://travis-ci.org/OuhscBbmc/pluripotent/builds) | [AppVeyor](https://ci.appveyor.com/project/wibeasley/pluripotent/history) | [Coveralls](https://coveralls.io/r/OuhscBbmc/pluripotent) |
 | :----- | :---------------------------: | :-----------------------------: | :-------: |
-| [Master](https://github.com/OuhscBbmc/pluripotent/tree/master) | [![Build Status](https://travis-ci.org/OuhscBbmc/pluripotent.svg?branch=master)](https://travis-ci.org/OuhscBbmc/pluripotent) | [![Build status](https://ci.appveyor.com/api/projects/status/ie2hgogtuqom092k/branch/master?svg=true)](https://ci.appveyor.com/project/wibeasley/pluripotent/branch/master) | [![Coverage Status](https://coveralls.io/repos/github/OuhscBbmc/pluripotent/badge.svg?branch=master)](https://coveralls.io/github/OuhscBbmc/pluripotent?branch=master) |
+| [Main](https://github.com/OuhscBbmc/pluripotent/tree/main) | [![Build Status](https://travis-ci.org/OuhscBbmc/pluripotent.svg?branch=main)](https://travis-ci.org/OuhscBbmc/pluripotent) | [![Build status](https://ci.appveyor.com/api/projects/status/ie2hgogtuqom092k/branch/main?svg=true)](https://ci.appveyor.com/project/wibeasley/pluripotent/branch/main) | [![Coverage Status](https://coveralls.io/repos/github/OuhscBbmc/pluripotent/badge.svg?branch=main)](https://coveralls.io/github/OuhscBbmc/pluripotent?branch=main) |
 | [Dev](https://github.com/OuhscBbmc/pluripotent/tree/dev) | [![Build Status](https://travis-ci.org/OuhscBbmc/pluripotent.svg?branch=dev)](https://travis-ci.org/OuhscBbmc/pluripotent) | [![Build status](https://ci.appveyor.com/api/projects/status/ie2hgogtuqom092k/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/pluripotent/branch/dev) | [![Coverage Status](https://coveralls.io/repos/github/OuhscBbmc/pluripotent/badge.svg?branch=dev)](https://coveralls.io/github/OuhscBbmc/pluripotent?branch=dev) |
 | | *Ubuntu LTS* | *Windows Server* | *Test Coverage* |
 

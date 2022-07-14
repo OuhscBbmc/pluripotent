@@ -21,7 +21,7 @@ template values with project-specific values.
 library(pluripotent)
 
 \dontrun{
-url_config <- "https://github.com/OuhscBbmc/cdw-skeleton-1/blob/master/config.yml?raw=true"
+url_config <- "https://github.com/OuhscBbmc/cdw-skeleton-1/blob/main/config.yml?raw=true"
 path_in    <- "~/config.yml"
 path_out   <- "~/config-out.yml"
 utils::download.file(url=url_config, destfile=path_in)

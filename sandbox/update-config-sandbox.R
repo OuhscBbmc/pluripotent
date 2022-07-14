@@ -3,7 +3,7 @@ library(magrittr)
 
 # Run this line to update to the newest config file:
 # utils::download.file(
-#   url       = "https://github.com/OuhscBbmc/cdw-skeleton-1/blob/master/config.yml?raw=true",
+#   url       = "https://github.com/OuhscBbmc/cdw-skeleton-1/blob/main/config.yml?raw=true",
 #   destfile  = "./inst/tests/config.yml"
 # )
 
