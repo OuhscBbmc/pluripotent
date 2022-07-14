@@ -1,5 +1,5 @@
 #' @name start_project
-#' @aliases start_r_analysis_skeleton start_cdw_skeleton_1
+#' @aliases start_r_analysis_skeleton start_cdw_skeleton_1 start_neonatology_1
 #'
 #'
 #' @title Start specific projects
@@ -20,11 +20,16 @@
 #'   project_name  = "new-project-cdw",
 #'   destination_directory = "~/cdw"
 #' )
+#' start_neonatology_1(
+#'   project_name  = "new-project-neonatology",
+#'   destination_directory = "~/neonatology"
+#' )
 #'
 #' @details
-#' Currently, two types of project is supported:
+#' Currently, three types of project are supported:
 #' 1. r-analysis-skeleton
 #' 1. cdw-sekeleton-1
+#' 1. start_neonatology_1
 #'
 #' @note
 #' To view the files involved in each project type,
@@ -47,6 +52,7 @@
 #' start_r_analysis_skeleton("new-project", "./data-public/testing")
 #' start_cdw_skeleton_1()
 #' start_cdw_skeleton_1("thumann-awesomeness-4")
+#' start_neonatology_1("deshea-awesomeness-4")
 #' }
 
 #' @export
@@ -60,13 +66,12 @@ start_r_analysis_skeleton <- function(
     project_name          = project_name,
     destination_directory = destination_directory
   )
-
 }
 
 #' @export
 start_cdw_skeleton_1 <- function(
-  project_name              = "new-project-cdw",
-  destination_directory     = "~/cdw"
+    project_name              = "new-project-cdw",
+    destination_directory     = "~/cdw"
 ) {
 
   start_skeleton(
@@ -74,7 +79,19 @@ start_cdw_skeleton_1 <- function(
     project_name          = project_name,
     destination_directory = destination_directory
   )
+}
 
+#' @export
+start_neonatology_1 <- function(
+    project_name              = "new-project-neonatology",
+    destination_directory     = "~/neonatology"
+) {
+
+  start_skeleton(
+    offspring_type        = "neonatology-1",
+    project_name          = project_name,
+    destination_directory = destination_directory
+  )
 }
 
 start_skeleton <- function(

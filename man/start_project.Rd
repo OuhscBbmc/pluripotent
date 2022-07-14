@@ -4,6 +4,7 @@
 \alias{start_project}
 \alias{start_r_analysis_skeleton}
 \alias{start_cdw_skeleton_1}
+\alias{start_neonatology_1}
 \title{Start specific projects}
 \usage{
 start_r_analysis_skeleton(
@@ -13,6 +14,10 @@ start_r_analysis_skeleton(
 start_cdw_skeleton_1(
   project_name  = "new-project-cdw",
   destination_directory = "~/cdw"
+)
+start_neonatology_1(
+  project_name  = "new-project-neonatology",
+  destination_directory = "~/neonatology"
 )
 }
 \arguments{
@@ -25,10 +30,11 @@ start_cdw_skeleton_1(
 to the \code{destination_directory} on your local maachine.
 }
 \details{
-Currently, two types of project is supported:
+Currently, three types of project are supported:
 \enumerate{
 \item r-analysis-skeleton
 \item cdw-sekeleton-1
+\item start_neonatology_1
 }
 }
 \note{
@@ -48,6 +54,7 @@ library(pluripotent)
 start_r_analysis_skeleton("new-project", "./data-public/testing")
 start_cdw_skeleton_1()
 start_cdw_skeleton_1("thumann-awesomeness-4")
+start_neonatology_1("deshea-awesomeness-4")
 }
 }
 \author{
