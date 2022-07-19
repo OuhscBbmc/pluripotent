@@ -33,10 +33,11 @@ of files to be copied into a new project, while
 on your local maachine.
 }
 \details{
-Currently, two types of project is supported:
+Currently, three types of projects are supported:
 \enumerate{
 \item r-analysis-skeleton
 \item cdw-skeleton-1
+\item neonatology-1
 }
 }
 \note{
