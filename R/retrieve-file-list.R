@@ -28,9 +28,10 @@
 #' )
 #'
 #' @details
-#' Currently, two types of project is supported:
+#' Currently, three types of projects are supported:
 #' 1. r-analysis-skeleton
 #' 1. cdw-skeleton-1
+#' 1. neonatology-1
 #'
 #' @note
 #' To view the files involved in each project type,
@@ -93,7 +94,8 @@ retrieve_file_list <- function(
 
   levels_offspring <- c(
     "r-analysis-skeleton",
-    "cdw-skeleton-1"
+    "cdw-skeleton-1",
+    "neonatology-1"
   )
   checkmate::assert_character( offspring          , any.missing=F, min.chars=1, len=1)
   checkmate::assert_subset(    offspring          , levels_offspring, empty.ok = F)
