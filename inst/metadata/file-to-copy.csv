@@ -73,9 +73,9 @@ cdw-skeleton-1,TRUE,data-unshared/raw/README.md,TRUE,https://raw.githubuserconte
 cdw-skeleton-1,TRUE,documentation/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/documentation/README.md
 cdw-skeleton-1,TRUE,documentation/irb/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/documentation/irb/README.md
 cdw-skeleton-1,TRUE,manipulation/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/manipulation/README.md
-cdw-skeleton-1,TRUE,manipulation/csv-report-generator.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/manipulation/csv-report-generator.R
 cdw-skeleton-1,TRUE,manipulation/scribe-factory.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/manipulation/scribe-factory.R
-cdw-skeleton-1,TRUE,manipulation/ss-county-ellis.R,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/manipulation/ss-county-ellis.R
+cdw-skeleton-1,TRUE,manipulation/ss/ss-dx-create-placeholder.sql,TRUE,https://raw.githubusercontent.com/OuhscBbmc/prairie-outpost-public/main/code/ss-dx-create.sql
+cdw-skeleton-1,TRUE,manipulation/ss/ss-dx-ellis-placeholder.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/prairie-outpost-public/main/code/ss-dx-ellis.R
 cdw-skeleton-1,TRUE,S:/BBMC/prairie-outpost/{project-name}/data-public/README.md,FALSE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/file-server/data-public/README.md
 cdw-skeleton-1,TRUE,S:/BBMC/prairie-outpost/{project-name}/data-private/README.md,FALSE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/file-server/data-private/README.md
 cdw-skeleton-1,FALSE,S:/BBMC/prairie-outpost/{project-name}/data-public/sweep-and-specify-centricity/input/review-required/diagnosis/template/centricity-diagnosis.csv,FALSE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/file-server/data-public/sweep-and-specify-centricity/input/review-required/diagnosis/template/centricity-diagnosis.csv
