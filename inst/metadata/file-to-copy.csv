@@ -62,9 +62,8 @@ cdw-skeleton-1,TRUE,analysis/README.md,TRUE,https://raw.githubusercontent.com/wi
 cdw-skeleton-1,TRUE,data-public/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/README.md
 cdw-skeleton-1,TRUE,data-public/derived/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/derived/README.md
 cdw-skeleton-1,TRUE,data-public/metadata/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/metadata/README.md
-cdw-skeleton-1,TRUE,data-public/metadata/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/metadata/README.md
-cdw-skeleton-1,TRUE,data-public/metadata/cqi-annotation.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/metadata/cqi-annotation.csv
-cdw-skeleton-1,TRUE,data-public/metadata/ss-county.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/metadata/ss-county.csv
+cdw-skeleton-1,FALSE,data-public/metadata/cqi-annotation.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/metadata/cqi-annotation.csv
+cdw-skeleton-1,FALSE,data-public/metadata/ss-county.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/metadata/ss-county.csv
 cdw-skeleton-1,TRUE,data-public/raw/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/raw/README.md
 cdw-skeleton-1,TRUE,data-unshared/contents.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-unshared/contents.md
 cdw-skeleton-1,TRUE,data-unshared/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-unshared/README.md
@@ -107,7 +106,6 @@ neonatology-1,TRUE,analysis/inspection/inspection.R,TRUE,https://raw.githubuserc
 neonatology-1,TRUE,analysis/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/analysis/README.md
 neonatology-1,TRUE,data-public/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/README.md
 neonatology-1,TRUE,data-public/derived/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/derived/README.md
-neonatology-1,TRUE,data-public/metadata/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/metadata/README.md
 neonatology-1,TRUE,data-public/metadata/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/metadata/README.md
 neonatology-1,TRUE,data-public/metadata/cqi-annotation.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/metadata/cqi-annotation.csv
 neonatology-1,TRUE,data-public/metadata/ss-county.csv,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/data-public/metadata/ss-county.csv
