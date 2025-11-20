@@ -8,8 +8,6 @@
 #'
 #' @return Invisibly returns TRUE if successful, FALSE otherwise.
 #'
-#' @importFrom tools file_path_sans_ext
-#'
 #' @keywords internal
 #'
 #' @examples
@@ -31,21 +29,46 @@ create_file_server_shortcut <- function(project_directory, file_server_path) {
   tryCatch({
     # Check if running on Windows
     if (.Platform$OS.type == "windows") {
-      # Use PowerShell to create shortcut
-      ps_command <- sprintf(
-        '$WshShell = New-Object -ComObject WScript.Shell; $Shortcut = $WshShell.CreateShortcut("%s"); $Shortcut.TargetPath = "%s"; $Shortcut.Save()',
-        gsub("/", "\\\\", shortcut_path),
-        gsub("/", "\\\\", file_server_path)
+
+      # Create a temporary VBScript file
+      vbs_script <- tempfile(fileext = ".vbs")
+
+      # Convert forward slashes to backslashes for Windows paths
+      shortcut_path_win <- normalizePath(shortcut_path, winslash = "\\", mustWork = FALSE)
+      file_server_path_win <- gsub("/", "\\\\", file_server_path)
+
+      # VBScript code to create shortcut
+      vbs_code <- sprintf(
+        'Set oWS = WScript.CreateObject("WScript.Shell")
+Set oLink = oWS.CreateShortcut("%s")
+oLink.TargetPath = "%s"
+oLink.Description = "Shortcut to project file server directory"
+oLink.Save',
+        shortcut_path_win,
+        file_server_path_win
       )
 
-      result <- system2("powershell", args = c("-Command", shQuote(ps_command, type = "cmd")),
-                        stdout = TRUE, stderr = TRUE)
+      # Write VBScript to temp file
+      writeLines(vbs_code, vbs_script)
 
+      # Execute VBScript
+      result <- system2(
+        command = "cscript",
+        args = c("//nologo", shQuote(vbs_script)),
+        stdout = TRUE,
+        stderr = TRUE
+      )
+
+      # Clean up VBScript file
+      unlink(vbs_script)
+
+      # Check if shortcut was created
       if (file.exists(shortcut_path)) {
         message("Created shortcut to file server at: ", shortcut_path)
         return(invisible(TRUE))
       } else {
         warning("Shortcut creation may have failed. File not found at: ", shortcut_path)
+        warning("VBScript output: ", paste(result, collapse = "\n"))
         return(invisible(FALSE))
       }
 
