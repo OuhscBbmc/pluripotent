@@ -5,6 +5,7 @@
 #'
 #' @param project_directory [character] Path to the local project directory. Required.
 #' @param file_server_path [character] Path to the file server location. Required.
+#' @param project_name [character] Name of the project (for shortcut naming). Required.
 #'
 #' @return Invisibly returns TRUE if successful, FALSE otherwise.
 #'
@@ -14,21 +15,26 @@
 #' \dontrun{
 #' create_file_server_shortcut(
 #'   project_directory = "~/my-project",
-#'   file_server_path = "//pedsis/peds/data/BBMC/prairie-outpost/my-project"
+#'   file_server_path = config_data$directory_file_server,
+#'   project_name = "my-project"
 #' )
 #' }
 
-create_file_server_shortcut <- function(project_directory, file_server_path) {
+create_file_server_shortcut <- function(project_directory, file_server_path, project_name) {
 
   checkmate::assert_directory_exists(project_directory)
   checkmate::assert_character(file_server_path, min.chars = 1, len = 1)
+  checkmate::assert_character(project_name, min.chars = 1, len = 1)
 
   tryCatch({
     # Check if running on Windows
     if (.Platform$OS.type == "windows") {
 
+      # Create shortcut name with project name
+      shortcut_name <- paste0("S-Drive-", project_name, ".lnk")
+      shortcut_path <- file.path(project_directory, shortcut_name)
+
       # Delete any existing shortcut first
-      shortcut_path <- file.path(project_directory, "File Server Data.lnk")
       if (file.exists(shortcut_path)) {
         unlink(shortcut_path)
       }
@@ -39,13 +45,12 @@ create_file_server_shortcut <- function(project_directory, file_server_path) {
       # Normalize paths for Windows
       # Use normalizePath for the shortcut location (must exist)
       shortcut_path_win <- normalizePath(project_directory, winslash = "\\", mustWork = TRUE)
-      shortcut_path_win <- file.path(shortcut_path_win, "File Server Data.lnk")
+      shortcut_path_win <- file.path(shortcut_path_win, shortcut_name)
 
       # Convert forward slashes to backslashes for UNC path
       file_server_path_win <- gsub("/", "\\\\", file_server_path)
 
       # VBScript code to create shortcut
-      # Note: Using cat() to show the actual VBScript for debugging
       vbs_code <- sprintf(
         'Set WshShell = WScript.CreateObject("WScript.Shell")
 Set oShellLink = WshShell.CreateShortcut("%s")
@@ -104,7 +109,8 @@ oShellLink.Save
 
     } else {
       # On non-Windows systems, create a symbolic link instead
-      symlink_path <- file.path(project_directory, "File Server Data")
+      symlink_name <- paste0("S-Drive-", project_name)
+      symlink_path <- file.path(project_directory, symlink_name)
 
       if (file.exists(symlink_path)) {
         message("Symlink already exists at: ", symlink_path)
