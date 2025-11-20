@@ -115,4 +115,23 @@ start_skeleton <- function(
   #   browser()
 
   purrr::walk2(.x=d$source, .y=d$destination, .f=~utils::download.file(url=.x, destfile=.y))
+
+  if (offspring_type %in% c("cdw-skeleton-1", "neonatology-1")) {
+    config_path <- file.path(destination_directory_full, "config.yml")
+
+    # Wait a moment to ensure file is written
+    Sys.sleep(0.5)
+
+    if (file.exists(config_path)) {
+      # Read the populated config to get the actual file server path
+      config_data <- config::get(file = config_path)
+
+      if (!is.null(config_data$directory_file_server)) {
+        create_file_server_shortcut(
+          project_directory = destination_directory_full,
+          file_server_path = config_data$directory_file_server
+        )
+      }
+    }
+  }
 }
