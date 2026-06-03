@@ -80,6 +80,12 @@ cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-dx-create-placeholder.sql,TRU
 cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-dx-ellis-placeholder.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/prairie-outpost-public/main/code/ss-dx-ellis.R
 cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-clinic-lubec-placeholder.sql,TRUE,https://raw.githubusercontent.com/OuhscBbmc/prairie-outpost-public/main/code/ss-clinic-lubec.sql
 cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-source-lubec-placeholder.sql,TRUE,https://raw.githubusercontent.com/OuhscBbmc/prairie-outpost-public/main/code/ss-source-lubec.sql
+cdw-skeleton-1,TRUE,AGENTS.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/AGENTS.md
+cdw-skeleton-1,TRUE,HOW-TO-AI.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/HOW-TO-AI.md
+cdw-skeleton-1,TRUE,.github/copilot-instructions.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.github/copilot-instructions.md
+cdw-skeleton-1,TRUE,.vscode/tasks.json,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.vscode/tasks.json
+cdw-skeleton-1,TRUE,utility/populate-scripts.py,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/utility/populate-scripts.py
+cdw-skeleton-1,TRUE,utility/export-repo-issues.py,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/utility/export-repo-issues.py
 cdw-skeleton-1,TRUE,S:/BBMC/prairie-outpost/{project-name}/data-public/README.md,FALSE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/file-server/data-public/README.md
 cdw-skeleton-1,TRUE,S:/BBMC/prairie-outpost/{project-name}/data-private/README.md,FALSE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/file-server/data-private/README.md
 cdw-skeleton-1,FALSE,S:/BBMC/prairie-outpost/{project-name}/data-public/sweep-and-specify-centricity/input/review-required/diagnosis/template/centricity-diagnosis.csv,FALSE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/file-server/data-public/sweep-and-specify-centricity/input/review-required/diagnosis/template/centricity-diagnosis.csv
