@@ -81,6 +81,7 @@ cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-dx-ellis-placeholder.R,TRUE,h
 cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-clinic-lubec-placeholder.sql,TRUE,https://raw.githubusercontent.com/OuhscBbmc/prairie-outpost-public/main/code/ss-clinic-lubec.sql
 cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-source-lubec-placeholder.sql,TRUE,https://raw.githubusercontent.com/OuhscBbmc/prairie-outpost-public/main/code/ss-source-lubec.sql
 cdw-skeleton-1,TRUE,AGENTS.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/AGENTS.md
+cdw-skeleton-1,TRUE,.claude/commands/repo-work.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/repo-work.md
 cdw-skeleton-1,TRUE,HOW-TO-AI.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/HOW-TO-AI.md
 cdw-skeleton-1,TRUE,.github/copilot-instructions.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.github/copilot-instructions.md
 cdw-skeleton-1,TRUE,.vscode/tasks.json,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.vscode/tasks.json
