@@ -16,7 +16,7 @@ A new project/repo called 'beasley-poc-1' can be generated in two ways:
 1. Run this single chunk of code, after updating the `project_name` and `destination_directory` arguments.
 
     ```r
-    remotes::install_github(repo="OuhscBbmc/pluripotent")
+    pak::pak("OuhscBbmc/pluripotent")
     pluripotent::start_cdw_skeleton_1(
       project_name            = "beasley-poc-1",
       destination_directory   = "~/bbmc/cdw"
@@ -26,9 +26,9 @@ A new project/repo called 'beasley-poc-1' can be generated in two ways:
 1. The [cdw-template-1](https://github.com/OuhscBbmc/cdw-template-1) repo provides a platform to jump-start consistent repos for CDW projects.  Once it's used as a [GitHub template](https://help.github.com/en/articles/creating-a-repository-from-a-template), the [`utility/spawn.R`](https://github.com/OuhscBbmc/cdw-template-1/blob/main/utility/spawn.R) file contains the following dynamic code that should run without modification.
 
     ```r
-    # Install remotes & pluripotent if not already installed.  pluripotent won't reinstall if it's already up-to-date.
-    if( !requireNamespace("remotes") ) utils::install.packages("remotes")
-    remotes::install_github("OuhscBbmc/pluripotent")
+    # Install pak & pluripotent if not already installed.  pluripotent won't reinstall if it's already up-to-date.
+    if( !requireNamespace("pak") ) utils::install.packages("pak")
+    pak::pak("OuhscBbmc/pluripotent")
 
     # Discover repo name & parent directory.
     project_name          <- basename(normalizePath(".."))
@@ -71,11 +71,11 @@ If you want to use this package for projects that aren't included in [inst/metad
 Installation and Documentation
 --------------------------------------
 
-The *development* version can be installed from [GitHub](https://github.com/OuhscBbmc/pluripotent) after installing the [remotes](https://CRAN.R-project.org/package=remotes) package.
+The *development* version can be installed from [GitHub](https://github.com/OuhscBbmc/pluripotent) after installing the [pak](https://CRAN.R-project.org/package=pak) package.
 
 ```r
-install.packages("pluripotent") # Run this line if the 'remotes' package isn't installed already.
-remotes::install_github(repo="OuhscBbmc/pluripotent")
+install.packages("pak") # Run this line if the 'pak' package isn't installed already.
+pak::pak("OuhscBbmc/pluripotent")
 ```
 
 The package can be uninstalled from your local machine with `remove.packages("pluripotent")`.
