@@ -72,6 +72,9 @@ cdw-skeleton-1,TRUE,data-unshared/raw/README.md,TRUE,https://raw.githubuserconte
 cdw-skeleton-1,TRUE,documentation/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/documentation/README.md
 cdw-skeleton-1,TRUE,documentation/irb/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/documentation/irb/README.md
 cdw-skeleton-1,TRUE,manipulation/README.md,TRUE,https://raw.githubusercontent.com/wibeasley/RAnalysisSkeleton/main/manipulation/README.md
+cdw-skeleton-1,TRUE,manipulation/redcap-generator-placeholder/generate-data-dictionary.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/manipulation/redcap-generator/generate-data-dictionary.R
+cdw-skeleton-1,TRUE,manipulation/redcap-generator-placeholder/generate-redcap-ferry.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/manipulation/redcap-generator/generate-redcap-ferry.R
+cdw-skeleton-1,TRUE,manipulation/redcap-generator-placeholder/run-redcap-setup.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/manipulation/redcap-generator/run-redcap-setup.R
 cdw-skeleton-1,TRUE,manipulation/scribe-factory.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/manipulation/scribe-factory.R
 cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-dx-create-placeholder.sql,TRUE,https://raw.githubusercontent.com/OuhscBbmc/prairie-outpost-public/main/code/ss-dx-create.sql
 cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-dx-ellis-placeholder.R,TRUE,https://raw.githubusercontent.com/OuhscBbmc/prairie-outpost-public/main/code/ss-dx-ellis.R
