@@ -83,7 +83,6 @@ cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-source-lubec-placeholder.sql,
 cdw-skeleton-1,TRUE,AGENTS.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/AGENTS.md
 cdw-skeleton-1,TRUE,HOW-TO-AI.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/HOW-TO-AI.md
 cdw-skeleton-1,TRUE,.claude/commands/cdw-orient.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-orient.md
-cdw-skeleton-1,TRUE,.claude/commands/cdw-start.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-start.md
 cdw-skeleton-1,TRUE,.claude/commands/cdw-plan.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-plan.md
 cdw-skeleton-1,TRUE,.claude/commands/cdw-sql-scaffold.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-sql-scaffold.md
 cdw-skeleton-1,TRUE,.claude/commands/cdw-ss-build.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-ss-build.md
