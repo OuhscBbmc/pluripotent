@@ -88,6 +88,7 @@ cdw-skeleton-1,TRUE,.claude/commands/cdw-sql-scaffold.md,TRUE,https://raw.github
 cdw-skeleton-1,TRUE,.claude/commands/cdw-ss-build.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-ss-build.md
 cdw-skeleton-1,TRUE,.claude/commands/cdw-sql-work.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-sql-work.md
 cdw-skeleton-1,TRUE,.claude/commands/cdw-end-session.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-end-session.md
+cdw-skeleton-1,TRUE,.claude/commands/cdw-ai-update.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-ai-update.md
 cdw-skeleton-1,TRUE,.vscode/tasks.json,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.vscode/tasks.json
 cdw-skeleton-1,TRUE,utility/run-python.ps1,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/utility/run-python.ps1
 cdw-skeleton-1,TRUE,utility/populate-scripts.py,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/utility/populate-scripts.py
