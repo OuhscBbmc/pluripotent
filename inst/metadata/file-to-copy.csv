@@ -81,7 +81,7 @@ cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-dx-ellis-placeholder.R,TRUE,h
 cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-clinic-lubec-placeholder.sql,TRUE,https://raw.githubusercontent.com/OuhscBbmc/prairie-outpost-public/main/code/ss-clinic-lubec.sql
 cdw-skeleton-1,TRUE,manipulation/ss/placeholder/ss-source-lubec-placeholder.sql,TRUE,https://raw.githubusercontent.com/OuhscBbmc/prairie-outpost-public/main/code/ss-source-lubec.sql
 cdw-skeleton-1,TRUE,AGENTS.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/AGENTS.md
-cdw-skeleton-1,TRUE,HOW-TO-AI.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/HOW-TO-AI.md
+cdw-skeleton-1,TRUE,ai/README.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/ai/README.md
 cdw-skeleton-1,TRUE,.claude/commands/cdw-orient.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-orient.md
 cdw-skeleton-1,TRUE,.claude/commands/cdw-plan.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-plan.md
 cdw-skeleton-1,TRUE,.claude/commands/cdw-sql-scaffold.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-sql-scaffold.md
@@ -89,6 +89,7 @@ cdw-skeleton-1,TRUE,.claude/commands/cdw-ss-build.md,TRUE,https://raw.githubuser
 cdw-skeleton-1,TRUE,.claude/commands/cdw-sql-work.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-sql-work.md
 cdw-skeleton-1,TRUE,.claude/commands/cdw-end-session.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.claude/commands/cdw-end-session.md
 cdw-skeleton-1,TRUE,.vscode/tasks.json,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/.vscode/tasks.json
+cdw-skeleton-1,TRUE,utility/run-python.ps1,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/utility/run-python.ps1
 cdw-skeleton-1,TRUE,utility/populate-scripts.py,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/utility/populate-scripts.py
 cdw-skeleton-1,TRUE,utility/export-repo-issues.py,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/utility/export-repo-issues.py
 cdw-skeleton-1,TRUE,ai/safety-rules.md,TRUE,https://raw.githubusercontent.com/OuhscBbmc/cdw-skeleton-1/main/ai/safety-rules.md
